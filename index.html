@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b12" />
+    <meta name="description" content="Kaliph Howard — student, builder, leader, and creative." />
+    <title>Kaliph Howard — Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2226%22 fill=%22%23d8e5ff%22/><text x=%2250%22 y=%2267%22 text-anchor=%22middle%22 font-size=%2252%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22%23080b12%22>KH</text></svg>" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav-wrap">
+      <nav class="glass-nav" aria-label="Primary navigation">
+        <a class="nav-brand" href="./index.html" aria-label="Kaliph Howard, home">
+          <span>KH</span><i></i>
+        </a>
+        <div class="nav-pages">
+          <a data-nav="home" href="./index.html">Home</a>
+          <a data-nav="work" href="./work.html">Work</a>
+          <a data-nav="about" href="./about.html">About</a>
+        </div>
+        <a class="nav-contact" data-nav="contact" href="./contact.html">
+          <span>Contact</span><span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="main" class="portal-main">
+      <section class="portal-stage" aria-labelledby="home-title" data-portal data-active-lens="leadership">
+        <div class="portal-atmosphere" aria-hidden="true"><i></i><i></i><i></i></div>
+
+        <header class="portal-intro enter">
+          <p>Kaliph Howard · Chicago · Class of 2027</p>
+          <h1 id="home-title"><span>KALIPH</span><span>HOWARD</span></h1>
+          <div class="portal-summary">
+            <span>A look inside my world</span>
+            <p>I’m a student drawn to building things, bringing people together, and learning what makes an idea work.</p>
+          </div>
+        </header>
+
+        <figure class="portal-photo enter enter--delay">
+          <img src="./assets/portrait-placeholder.svg" alt="Placeholder for Kaliph Howard’s portrait" />
+          <figcaption>Portrait placeholder</figcaption>
+        </figure>
+
+        <div class="portal-world enter enter--later">
+          <div class="portal-lenses" role="group" aria-label="Explore the parts of Kaliph’s world">
+            <button class="portal-lens is-active" type="button" data-lens="leadership" aria-pressed="true">
+              <i aria-hidden="true"></i><small>01</small><span>Leadership</span><p>Giving ideas direction.</p><b aria-hidden="true">↗</b>
+            </button>
+            <button class="portal-lens" type="button" data-lens="technology" aria-pressed="false">
+              <i aria-hidden="true"></i><small>02</small><span>Technology</span><p>Making useful things real.</p><b aria-hidden="true">↗</b>
+            </button>
+            <button class="portal-lens" type="button" data-lens="business" aria-pressed="false">
+              <i aria-hidden="true"></i><small>03</small><span>Business</span><p>Understanding how ideas grow.</p><b aria-hidden="true">↗</b>
+            </button>
+            <button class="portal-lens" type="button" data-lens="community" aria-pressed="false">
+              <i aria-hidden="true"></i><small>04</small><span>Community</span><p>Helping people feel connected.</p><b aria-hidden="true">↗</b>
+            </button>
+          </div>
+        </div>
+
+        <aside class="portal-detail enter enter--later" aria-live="polite">
+          <span data-lens-number>01 / A part of my world</span>
+          <h2 data-lens-title>Leadership</h2>
+          <p data-lens-copy>Giving an idea direction, helping people contribute, and staying responsible for what happens next.</p>
+        </aside>
+
+        <div class="portal-actions enter enter--later">
+          <a href="./about.html">About me <span>↗</span></a>
+          <a href="./work.html">Enter the work <span>↗</span></a>
+        </div>
+
+        <footer class="portal-footer">
+          <span>Move your pointer. Choose a lens.</span>
+          <span>Leadership · Technology · Business · Community</span>
+        </footer>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© <span data-year></span> Kaliph Howard</span><span>Built for the next chapter.</span><a href="./contact.html">Start a conversation ↗</a></footer>
+  </body>
+</html>

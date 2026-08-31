@@ -1,0 +1,19 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="80" x2="820" y2="1160" gradientUnits="userSpaceOnUse"><stop stop-color="#363C49"/><stop offset="0.48" stop-color="#171B22"/><stop offset="1" stop-color="#080A0D"/></linearGradient>
+    <linearGradient id="body" x1="298" y1="628" x2="618" y2="1186" gradientUnits="userSpaceOnUse"><stop stop-color="#222834"/><stop offset="1" stop-color="#050608"/></linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(650 305) rotate(137) scale(390 500)" gradientUnits="userSpaceOnUse"><stop stop-color="#D6DEEA" stop-opacity=".42"/><stop offset="1" stop-color="#D6DEEA" stop-opacity="0"/></radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .12"/></feComponentTransfer></filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <rect width="900" height="1200" fill="url(#light)"/>
+  <ellipse cx="486" cy="395" rx="172" ry="210" fill="#0A0C10"/>
+  <path d="M331 388C331 278 400 194 493 194C586 194 648 281 648 394V481C648 593 577 667 483 667C389 667 331 590 331 481V388Z" fill="#7A8088"/>
+  <path d="M317 393C303 279 377 172 494 172C611 172 685 292 654 410C588 365 544 312 519 247C474 323 409 370 317 393Z" fill="#080A0D"/>
+  <path d="M140 1200C156 834 290 654 481 654C672 654 792 839 806 1200H140Z" fill="url(#body)"/>
+  <path d="M395 1198L481 747L578 1198" stroke="#CBD7EA" stroke-opacity=".14" stroke-width="2"/>
+  <rect x="30" y="30" width="840" height="1140" stroke="#E4EBF7" stroke-opacity=".12"/>
+  <path d="M30 80H196" stroke="#D6E5FF" stroke-opacity=".55" stroke-width="2"/>
+  <rect width="900" height="1200" filter="url(#grain)" opacity=".8"/>
+  <text x="58" y="1118" fill="#E9EEF7" fill-opacity=".45" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="4">PORTRAIT PLACEHOLDER / FINAL PHOTO NEEDED</text>
+</svg>
