@@ -52,7 +52,7 @@ The `-ink` variants are used for any text; the base hues wash backgrounds only.
 
 - Portrait (Home, About): `assets/portrait-placeholder.svg`.
 - Contact email: `contact.html`, both the `href` and the visible label.
-- Contact: a one-page activities PDF, and links to other profiles.
+- Contact: links to other profiles. The activities PDF exists but carries placeholders for email and portfolio URL.
 - Playverse: in-game and social screenshots (`work/playverse.html`). The Roblox page and studio site are captured.
 - National Independent Black Student Union: photographs.
 - Juneteenth Lake County: photographs.
@@ -76,6 +76,10 @@ Verified from public sources on 2 September 2026: Roblox API reports FIFA Super 
 
 Deliberately left off the site: GPA and ACT scores. Those belong on the application itself; the site's job is to show the work behind them.
 
+## School-specific pages
+
+`for/<slug>/` pages personalise the words, not the colours: a note card at the top of the home page, opening on the facet that matters to that school. The identity stays intact on purpose; recolouring the site for each school would read as flattery. Pages are generated from `data/colleges.json` so a name and its note cannot drift apart.
+
 ## Case studies
 
-`work/wths.html`, `work/playverse.html`, `work/avnt.html`, `work/claudekat.html` share the site header with `../` paths and a `.case` layout. The ClaudeKat study is written at the engineering level on purpose; the repository's own dashboard preview features lookup and messaging tools that should not be shown to admissions readers.
+`work/wths.html`, `work/playverse.html`, `work/nibsu.html`, `work/juneteenth.html`, `work/avnt.html`, `work/claudekat.html` share the site header with `../` paths and a `.case` layout. The ClaudeKat study is written at the engineering level on purpose; the repository's own dashboard preview features lookup and messaging tools that should not be shown to admissions readers.

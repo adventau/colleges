@@ -83,12 +83,15 @@
       });
     });
 
-    // Return visitors land on the facet they last chose.
-    try {
-      const saved = sessionStorage.getItem("facet");
-      const k = tabs.findIndex((t) => t.dataset.facet === saved);
-      if (k >= 0) select(k);
-    } catch (_) {}
+    // Return visitors land on the facet they last chose, unless this is a
+    // school-specific page, which always opens on the facet chosen for that school.
+    if (!doc.dataset.for) {
+      try {
+        const saved = sessionStorage.getItem("facet");
+        const k = tabs.findIndex((t) => t.dataset.facet === saved);
+        if (k >= 0) select(k);
+      } catch (_) {}
+    }
   }
 
   /* ---------- Work: index rows, sticky preview, filters ---------- */
