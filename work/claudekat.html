@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="no-js" data-facet="technology">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ClaudeKat · Royal Vault — Kaliph Howard</title>
+  <meta name="description" content="A private, password-protected messaging and file app Kaliph designed and built end to end, with an iOS shell.">
+  <meta name="theme-color" content="#f3efe7">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ClaudeKat · Royal Vault — Kaliph Howard">
+  <meta property="og:description" content="A private, password-protected messaging and file app Kaliph designed and built end to end, with an iOS shell.">
+  <meta property="og:image" content="../assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
+  <script src="../js/site.js" defer></script>
+</head>
+<body data-page="work">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="site-head">
+    <a class="brand" href="../index.html">Kaliph Howard<small>Chicago · ’27</small></a>
+    <nav class="glass nav" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html" aria-current="page"><span class="nav__pill" aria-hidden="true"></span>Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="page case">
+    <header class="case__head">
+      <p class="eyebrow eyebrow--accent enter" style="--i:0"><a href="../work.html" style="text-decoration:none">Work</a> · Case study</p>
+      <h1 class="display enter" style="--i:1">A private app, built end to end.</h1>
+      <p class="lede enter" style="--i:2">Royal Vault is a private web app built for two people: encrypted messaging, files, notes and a set of personal tools behind a single password, with a native iOS shell that adds Face ID. I designed and built all of it.</p>
+    </header>
+    <dl class="case__meta enter" style="--i:3">
+      <div><dt>Role</dt><dd>Design · full-stack development · iOS shell</dd></div>
+      <div><dt>Areas</dt><dd>Technology · Design</dd></div>
+      <div><dt>Built with</dt><dd>Node.js, Express, Socket.IO, PostgreSQL, Capacitor</dd></div>
+      <div><dt>Status</dt><dd>Private; not open to the public</dd></div>
+    </dl>
+    <figure class="case__hero enter" style="--i:4"><img src="../assets/work/royal-vault-login.jpg" width="1440" height="900" alt="The Royal Vault sign-in screen: a crown mark, the words Private, Encrypted, Sovereign, and a password field on a deep purple background." loading="eager"><figcaption>The sign-in screen</figcaption></figure>
+    <div class="case__body">
+      <section class="enter" style="--i:5" aria-labelledby="s0"><h2 id="s0">What it is</h2><div class="prose"><p>A messaging and personal-tools app that lives on its own server rather than inside someone else’s platform. Messages are encrypted at rest, uploads are re-encoded server-side with metadata stripped, and the whole thing sits behind a password gate and session cookies.</p></div></section>
+      <section class="enter" style="--i:6" aria-labelledby="s1"><h2 id="s1">What I built</h2><ul class="prose"><li>Real-time chat over Socket.IO with push notifications, read states, embeds and search across an index the server maintains.</li><li>A media pipeline that accepts photos and video, converts HEIC and transcodes with FFmpeg, and serves everything session-gated.</li><li>An encrypted password manager, a notes and journal space, and a PDF statement generator.</li><li>Thirteen colour themes, a service worker for offline shell loading, and a guest mode with reduced access.</li><li>A Capacitor iOS wrapper with a Face ID gate and an app-switcher privacy cover, loading the live site so web updates ship to the app without a rebuild.</li><li>An audit log and a test suite for the security-sensitive parts.</li></ul></section>
+      <section class="enter" style="--i:7" aria-labelledby="s2"><h2 id="s2">What I learned</h2><div class="prose"><p>Building for two people is harder than building for a crowd, because there is nowhere to hide a rough edge. It taught me to take security seriously as a design problem: what gets stored, what gets stripped, who can see what, and how to make that invisible to the person using it.</p></div></section>
+    </div>
+    <nav class="case__nav" aria-label="More work"><a class="glass cta" href="avnt.html">Previous: AVNT <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="glass cta" href="../work.html">All work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
+  </main>
+
+  <footer class="site-foot">
+    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <span>© <span data-year>2026</span> Kaliph Howard</span>
+  </footer>
+</body>
+</html>

@@ -18,11 +18,13 @@ Then open http://127.0.0.1:4173. (Any static server works; `npx serve .` or `pyt
 ```
 index.html            Home: name, place, year, introduction, the five facets, routes to About and Work
 work.html             Work: filterable project index with a sticky identity plate per project
+work/*.html           Case studies: student council + class site, Playverse, AVNT, ClaudeKat
+404.html              Not-found page (uses absolute paths; serve from the site root)
 about.html            About: portrait + facts, biography in short sections, facet map
 contact.html          Contact: email (placeholder), location, school
 css/site.css          The whole design system (tokens, glass material, nav, pages, motion, responsive)
 js/site.js            Progressive enhancement: pointer light, facet tabs, project index, filters
-assets/               Portrait placeholder and favicon (SVG)
+assets/               Portrait placeholder, favicon, Open Graph image, and project images in assets/work/
 scripts/dev-server.mjs  Zero-dependency preview server
 docs/DESIGN.md        Creative direction, research notes, content guide, what is still placeholder
 ```
@@ -42,6 +44,10 @@ Both have system fallbacks, so the site is readable offline. No other third-part
 
 - Portrait: replace `assets/portrait-placeholder.svg` with a photograph cropped to 4:5, then update the `alt` text and `<figcaption>` in `index.html` and `about.html`.
 - Project images: each project on the Work page has a `.plate`. Swap the typographic plate for an `<img>` when real screenshots exist. Do not add mockups of screens that do not exist.
+
+## Sharing metadata
+
+Every page carries Open Graph tags. `og:image` points at `assets/og.png` with a relative path; once the site has a domain, change it to the absolute URL on each page.
 
 ## Publishing
 

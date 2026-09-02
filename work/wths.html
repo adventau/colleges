@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="no-js" data-facet="leadership">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Student Council and the Class of 2027 site — Kaliph Howard</title>
+  <meta name="description" content="Four years as Student Council President at Warren Township High School, and the website Kaliph built to run senior year.">
+  <meta name="theme-color" content="#f3efe7">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Student Council and the Class of 2027 site — Kaliph Howard">
+  <meta property="og:description" content="Four years as Student Council President at Warren Township High School, and the website Kaliph built to run senior year.">
+  <meta property="og:image" content="../assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
+  <script src="../js/site.js" defer></script>
+</head>
+<body data-page="work">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="site-head">
+    <a class="brand" href="../index.html">Kaliph Howard<small>Chicago · ’27</small></a>
+    <nav class="glass nav" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html" aria-current="page"><span class="nav__pill" aria-hidden="true"></span>Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="page case">
+    <header class="case__head">
+      <p class="eyebrow eyebrow--accent enter" style="--i:0"><a href="../work.html" style="text-decoration:none">Work</a> · Case study</p>
+      <h1 class="display enter" style="--i:1">Student Council President, and the site that runs senior year.</h1>
+      <p class="lede enter" style="--i:2">I have led the Class of 2027 at Warren Township High School since freshman year. In 2026 I built wths2027.com so the whole class has one place for everything that happens before graduation.</p>
+    </header>
+    <dl class="case__meta enter" style="--i:3">
+      <div><dt>Role</dt><dd>Student Council President, grades 9–12</dd></div>
+      <div><dt>Areas</dt><dd>Leadership · Technology · Community</dd></div>
+      <div><dt>Built with</dt><dd>Next.js, TypeScript, Tailwind CSS, SQLite, Docker on Railway</dd></div>
+      <div><dt>Live</dt><dd><a href="https://wths2027.com" rel="noopener">wths2027.com</a></dd></div>
+    </dl>
+    <figure class="case__hero enter" style="--i:4"><img src="../assets/work/wths-home.jpg" width="1440" height="900" alt="Home page of wths2027.com: the Class of 2027 header, a countdown to graduation, and buttons for upcoming events and announcements." loading="eager"><figcaption>wths2027.com, home page, September 2026</figcaption></figure>
+    <div class="case__body">
+      <section class="enter" style="--i:5" aria-labelledby="s0"><h2 id="s0">The job</h2><div class="prose"><p>Student council is the layer between the class and the school. Senior year is the heaviest version of it: Senior Sunrise, homecoming, yearbook deadlines, prom, graduation, and a hundred questions a week about all of them.</p><p>Every year those answers were scattered across group chats, Instagram and paper. I wanted one place that was always right.</p></div></section>
+      <section class="enter" style="--i:6" aria-labelledby="s1"><h2 id="s1">What I built</h2><ul class="prose"><li>Public pages for events with RSVPs, add-to-calendar links and a calendar view; announcements with categories and pinned posts; deadlines; yearbook and graduation information; a photo gallery; senior spotlights; and an opt-in senior directory.</li><li>Moderated forms so classmates can submit photos, request announcements and nominate people for spotlights without anyone touching code. Rate limiting and honeypots keep the forms clean.</li><li>An admin dashboard with roles for editors, photographers and moderators, an audit log and basic analytics, so the council can run the site as a team.</li><li>A management API with a bearer key so trusted automation can post events and announcements.</li><li>A countdown to graduation, a QR code generator for posters, dark mode, search, and a weather widget for the Gurnee campus.</li></ul></section>
+      <section class="enter" style="--i:7" aria-labelledby="s2"><h2 id="s2">How it runs</h2><div class="prose"><p>It is a Next.js application in TypeScript with a SQLite database, deployed in a Docker container on Railway with a persistent volume for the database and uploaded photos. I keep it running, keep the information accurate, and manage the class Instagram, @2027wths, alongside it.</p></div></section>
+      <section class="enter" style="--i:8" aria-labelledby="s3"><h2 id="s3">What I learned</h2><div class="prose"><p>The code was the smaller half. Deciding what the class actually needed, keeping dates correct when the school changes them, and building the roles and moderation that let other students contribute safely took longer and mattered more.</p><p>It also changed how I think about leadership: the best thing I did as president this year was build something that works when I am not in the room.</p></div></section>
+      <section class="enter" style="--i:9" aria-labelledby="sshots"><h2 id="sshots">Screens</h2><div class="shots"><figure><img src="../assets/work/wths-events.jpg" width="1440" height="900" alt="Events page with category filters, card and calendar views, and event posters." loading="lazy"><figcaption>Events, with filters and a calendar view</figcaption></figure><figure><img src="../assets/work/wths-announcements.jpg" width="1440" height="900" alt="Announcements page with search, category chips and a pinned Senior Sunrise post." loading="lazy"><figcaption>Announcements, pinned posts first</figcaption></figure><figure class="tall"><img src="../assets/work/wths-mobile.jpg" width="600" height="1300" alt="The home page on a phone, with the countdown to graduation." loading="lazy"><figcaption>On a phone</figcaption></figure></div></section>
+    </div>
+    <nav class="case__nav" aria-label="More work"><a class="glass cta" href="playverse.html">Next: Playverse <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="glass cta" href="../work.html">All work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
+  </main>
+
+  <footer class="site-foot">
+    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <span>© <span data-year>2026</span> Kaliph Howard</span>
+  </footer>
+</body>
+</html>

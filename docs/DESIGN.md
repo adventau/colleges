@@ -52,19 +52,30 @@ The `-ink` variants are used for any text; the base hues wash backgrounds only.
 
 - Portrait (Home, About): `assets/portrait-placeholder.svg`.
 - Contact email: `contact.html`, both the `href` and the visible label.
+- Contact: a one-page activities PDF, and links to other profiles.
+- Playverse: screenshots of the game, the group and the social channels, and a link to the experience (`work/playverse.html`, `work.html`).
+- Black Student Union: what the events are and how the union is organised; photographs.
 - Lake County Juneteenth: description, Kaliph's role, what he learned.
-- ClaudeKat Website: what it is, link, screenshots.
 - School design work: confirm the planner cover; add other pieces and images.
-- "More to code": additional entries.
-- About, "What's next": to be written by Kaliph.
-- Contact, "Elsewhere": profile links, once confirmed.
+- AVNT: live links once the public site is deployed.
+- `og:image` is a relative path until a domain exists; make it absolute then.
 
-## Statements that need Kaliph's confirmation (marked `.tbd` in the HTML)
+## Statements supplied by Kaliph on 2 September 2026 (now on the site)
 
-- That he helps lead his class (Home, Leadership facet).
-- That he designed and built the WTHS Class of 2027 site and runs it, plus the class's social presence and events.
-- The title "Founder" for AVNT.
-- Project management, brand, social media and partnerships as his role at Playverse.
-- The school planner cover, reproduced on apparel.
+Student Council President, grades 9–12. BSU President, grades 10–12, 60+ events, students from four Lake County districts. Project manager on Playverse's Super League Soccer, a FIFA-branded Roblox game, about 12 hours a week, 100,000+ players, 4,000,000+ group members. AP Computer Science Principles and AP English Language and Composition (current). Honors English II (grade 9). ASU Universal Learner ENG 101 (dates to be confirmed with ASU). Intends to study business and management, then an MBA or Master of Accounting.
 
-Nothing numeric (attendance, visits, members, followers, views) appears anywhere on the site, deliberately.
+## Still marked `.tbd` for Kaliph to confirm
+
+- Microsoft Office Specialist credentials (from an earlier draft).
+- The school planner cover, reproduced on apparel (from an earlier draft).
+- Black Abolition Movement For The Mind: a one-sentence description.
+- The family-responsibilities line on About, and its wording.
+- ASU ENG 101 term dates.
+- The colophon's description of how the site was built.
+- Juneteenth role and details.
+
+Deliberately left off the site: GPA and ACT scores. Those belong on the application itself; the site's job is to show the work behind them.
+
+## Case studies
+
+`work/wths.html`, `work/playverse.html`, `work/avnt.html`, `work/claudekat.html` share the site header with `../` paths and a `.case` layout. The ClaudeKat study is written at the engineering level on purpose; the repository's own dashboard preview features lookup and messaging tools that should not be shown to admissions readers.

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title">
+  <title id="title">AVNT</title>
+  <g fill="#0A0A0A">
+    <path fill-rule="evenodd" d="M30 256 128 44h44l98 212h-54l-24-56h-84l-24 56H30Zm98-100h44l-22-54-22 54Z"/>
+    <path d="M286 44h56l64 152 64-152h56l-93 212h-54L286 44Z"/>
+    <path d="M560 256V44h50l126 136V44h52v212h-50L612 120v136h-52Z"/>
+    <path d="M820 44h350v50h-148v162h-54V94H820V44Z"/>
+  </g>
+</svg>

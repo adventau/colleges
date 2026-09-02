@@ -609,3 +609,53 @@ ul, ol { margin: 0; padding: 0; }
   .page-head h1 { font-size: clamp(2.3rem, 1.6rem + 8vw, 3.6rem); }
   .project__body { padding-bottom: 1.5rem; }
 }
+
+/* ---------- 14. Image plates, case studies, 404 ------------------------- */
+.plate--img { background: var(--paper-deep); }
+.plate--img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.plate--img .plate__sub, .plate--img .plate__cap { color: #fff; text-shadow: 0 1px 8px rgb(0 0 0 / 0.5); z-index: 1; }
+.plate--img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(0 0 0 / 0.28), transparent 30%, transparent 70%, rgb(0 0 0 / 0.4)); }
+.plate--logo img { width: 62%; height: auto; }
+.project__figure { grid-column: 1 / -1; margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 40px -28px rgb(23 24 28 / 0.5); border: 1px solid var(--line); }
+.project__figure img { width: 100%; height: auto; }
+.project__figure figcaption { padding: 0.55rem 0.9rem; font-size: 0.8rem; color: var(--ink-3); background: rgb(255 255 255 / 0.5); border-top: 1px solid var(--line); }
+.project__foot a.cta { padding: 0.45rem 0.9rem; font-size: 0.88rem; }
+
+.case { max-width: 64rem; margin: 0 auto; }
+.case__head { display: grid; gap: 0.9rem; margin-bottom: clamp(1.5rem, 4vw, 2.5rem); }
+.case__head h1 { font-size: clamp(2.4rem, 1.6rem + 3.6vw, 5rem); }
+.case__meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; padding: 1.25rem 0; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line); margin-bottom: clamp(1.5rem, 4vw, 2.5rem); font-size: 0.95rem; }
+.case__meta dt { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; margin-bottom: 0.3rem; }
+.case__meta dd { margin: 0; }
+.case__meta a { color: var(--ink); }
+.case__hero { margin: 0 0 clamp(1.5rem, 4vw, 2.5rem); border-radius: calc(var(--radius) * 1.3); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 40px 70px -40px rgb(23 24 28 / 0.5); background: var(--paper-deep); }
+.case__hero img { width: 100%; height: auto; }
+.case__hero figcaption, .shots figcaption { padding: 0.55rem 0.9rem; font-size: 0.8rem; color: var(--ink-3); background: rgb(255 255 255 / 0.5); border-top: 1px solid var(--line); }
+.case__body { display: grid; gap: clamp(1.75rem, 4vw, 2.75rem); }
+.case__body section { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 1rem 2rem; align-items: start; }
+.case__body section > h2 { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; padding-top: 0.45rem; }
+.case__body .prose p:first-child { font-size: 1.12rem; color: var(--ink); }
+.case__body .prose p { color: var(--ink-2); }
+.case__body ul.prose { list-style: none; display: grid; gap: 0.5rem; color: var(--ink-2); }
+.case__body ul.prose li { padding-left: 1.1rem; position: relative; }
+.case__body ul.prose li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--accent); }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; margin: 0; }
+.shots figure { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--paper-deep); }
+.shots img { width: 100%; height: auto; }
+.shots .tall { grid-row: span 2; }
+.case__nav { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: clamp(2rem, 5vw, 3rem); padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.placeholder-fig { display: grid; place-items: center; aspect-ratio: 16 / 10; border: 1px dashed var(--line-strong); border-radius: var(--radius); color: var(--ink-3); font-size: 0.9rem; text-align: center; padding: 1rem; background: rgb(255 255 255 / 0.3); }
+
+.academics { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0.75rem; list-style: none; }
+.academics li { padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: rgb(255 255 255 / 0.3); font-size: 0.95rem; display: grid; gap: 0.25rem; }
+.academics b { font-weight: 600; }
+.academics span { color: var(--ink-2); font-size: 0.88rem; }
+
+.notfound { min-height: 70dvh; display: grid; align-content: center; gap: 1rem; }
+.notfound h1 { font-size: clamp(3rem, 2rem + 6vw, 7rem); }
+
+@media (max-width: 839px) {
+  .case__body section { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+  .case__body section > h2 { padding-top: 0; }
+  .shots .tall { grid-row: auto; }
+}
