@@ -53,16 +53,18 @@ The `-ink` variants are used for any text; the base hues wash backgrounds only.
 - Portrait (Home, About): `assets/portrait-placeholder.svg`.
 - Contact email: `contact.html`, both the `href` and the visible label.
 - Contact: a one-page activities PDF, and links to other profiles.
-- Playverse: screenshots of the game, the group and the social channels, and a link to the experience (`work/playverse.html`, `work.html`).
-- Black Student Union: what the events are and how the union is organised; photographs.
-- Lake County Juneteenth: description, Kaliph's role, what he learned.
+- Playverse: in-game and social screenshots (`work/playverse.html`). The Roblox page and studio site are captured.
+- Black Student Union: photographs, and the union's name.
+- Juneteenth Lake County: photographs.
 - School design work: confirm the planner cover; add other pieces and images.
 - AVNT: live links once the public site is deployed.
 - `og:image` is a relative path until a domain exists; make it absolute then.
 
 ## Statements supplied by Kaliph on 2 September 2026 (now on the site)
 
-Student Council President, grades 9–12. BSU President, grades 10–12, 60+ events, students from four Lake County districts. Project manager on Playverse's Super League Soccer, a FIFA-branded Roblox game, about 12 hours a week, 100,000+ players, 4,000,000+ group members. AP Computer Science Principles and AP English Language and Composition (current). Honors English II (grade 9). ASU Universal Learner ENG 101 (dates to be confirmed with ASU). Intends to study business and management, then an MBA or Master of Accounting.
+Student Council President, grades 9–12. BSU President, grades 10–12, 60+ events, students from four Lake County districts. Project manager on Playverse's Super League Soccer, a FIFA-licensed Roblox game, about 12 hours a week, 100,000+ players, 4,000,000+ group members. AP Computer Science Principles and AP English Language and Composition (current). Honors English II (grade 9). ASU Universal Learner ENG 101 (dates to be confirmed with ASU). Intends to study business and management, then an MBA or Master of Accounting. Volunteer manager for Juneteenth Lake County since 2020, coordinating volunteers and helping vendors set up. BSU kickoffs and large meetings in rented bowling alleys and restaurants; state representatives and senators have spoken to students. Grew @PlayverseStudio on X to 130,000 followers.
+
+Verified from public sources on 2 September 2026: Roblox API reports FIFA Super Soccer (place 12177325772, created 2023-01-16, formerly Super League Soccer) at 1,517,392,196 visits, 1,060,632 favourites, publisher group Play! Football (verified) with 1,916,683 members. playverse.games states 40,000 peak live players and twelve clubs in the FIFA Club World Cup 2025 experience. @PlayverseStudio shows about 171,600 followers today. juneteenthlakecounty.com: run by the Greater Waukegan Development Coalition, parade from Waukegan High School, festival at Foss Park, North Chicago.
 
 ## Still marked `.tbd` for Kaliph to confirm
 
@@ -72,7 +74,6 @@ Student Council President, grades 9–12. BSU President, grades 10–12, 60+ eve
 - The family-responsibilities line on About, and its wording.
 - ASU ENG 101 term dates.
 - The colophon's description of how the site was built.
-- Juneteenth role and details.
 
 Deliberately left off the site: GPA and ACT scores. Those belong on the application itself; the site's job is to show the work behind them.
 
