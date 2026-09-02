@@ -54,7 +54,7 @@ The `-ink` variants are used for any text; the base hues wash backgrounds only.
 - Contact email: `contact.html`, both the `href` and the visible label.
 - Contact: a one-page activities PDF, and links to other profiles.
 - Playverse: in-game and social screenshots (`work/playverse.html`). The Roblox page and studio site are captured.
-- Black Student Union: photographs, and the union's name.
+- National Independent Black Student Union: photographs.
 - Juneteenth Lake County: photographs.
 - School design work: confirm the planner cover; add other pieces and images.
 - AVNT: live links once the public site is deployed.
@@ -62,13 +62,12 @@ The `-ink` variants are used for any text; the base hues wash backgrounds only.
 
 ## Statements supplied by Kaliph on 2 September 2026 (now on the site)
 
-Student Council President, grades 9–12. BSU President, grades 10–12, 60+ events, students from four Lake County districts. Project manager on Playverse's Super League Soccer, a FIFA-licensed Roblox game, about 12 hours a week, 100,000+ players, 4,000,000+ group members. AP Computer Science Principles and AP English Language and Composition (current). Honors English II (grade 9). ASU Universal Learner ENG 101 (dates to be confirmed with ASU). Intends to study business and management, then an MBA or Master of Accounting. Volunteer manager at the 2024 Juneteenth Lake County festival at Foss Park (Kaliph first said 2020, then asked for the Foss Park year to be checked: the festival was at Waukegan Harbor for three years and moved to Foss Park in 2024; it returned to downtown Waukegan in 2025). BSU kickoffs and large meetings in rented bowling alleys and restaurants; state representatives and senators have spoken to students. Grew @PlayverseStudio on X to 130,000 followers.
+Student Council President, grades 9–12. BSU President, grades 10–12, 60+ events, students from four Lake County districts. Project manager on Playverse's Super League Soccer, a FIFA-licensed Roblox game, about 12 hours a week, 100,000+ players, 4,000,000+ group members. AP Computer Science Principles and AP English Language and Composition (current). Honors English II (grade 9). ASU Universal Learner ENG 101 (dates to be confirmed with ASU). Intends to study business and management, then an MBA or Master of Accounting. Volunteer manager at the 2024 Juneteenth Lake County festival at Foss Park (Kaliph first said 2020, then asked for the Foss Park year to be checked: the festival was at Waukegan Harbor for three years and moved to Foss Park in 2024; it returned to downtown Waukegan in 2025). BSU kickoffs and large meetings in rented bowling alleys and restaurants; state representatives and senators have spoken to students. Grew @PlayverseStudio on X to 130,000 followers. Microsoft Office Specialist: Excel, Word, PowerPoint, and MOS Associate (confirmed).
 
 Verified from public sources on 2 September 2026: Roblox API reports FIFA Super Soccer (place 12177325772, created 2023-01-16, formerly Super League Soccer) at 1,517,392,196 visits, 1,060,632 favourites, publisher group Play! Football (verified) with 1,916,683 members; the studio group Play! Studios (id 7165738, owner MATS) has 4,304,548 members. playverse.games states 40,000 peak live players and twelve clubs in the FIFA Club World Cup 2025 experience. @PlayverseStudio shows about 171,600 followers today. juneteenthlakecounty.com: run by the Greater Waukegan Development Coalition, parade from Waukegan High School, festival at Foss Park, North Chicago.
 
 ## Still marked `.tbd` for Kaliph to confirm
 
-- Microsoft Office Specialist credentials (from an earlier draft).
 - The school planner cover, reproduced on apparel (from an earlier draft).
 - Black Abolition Movement For The Mind: a one-sentence description.
 - The family-responsibilities line on About, and its wording.
