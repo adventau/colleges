@@ -9,6 +9,8 @@ const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const colleges = JSON.parse(readFileSync(join(root, "data/colleges.json"), "utf8"));
 const template = readFileSync(join(root, "index.html"), "utf8");
 const FACETS = ["leadership", "technology", "business", "community", "design"];
+// School colour: an optional hex like "#4e2a84". Text on it is chosen for contrast at build time.
+function lum(hex) { const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i); if (!m) throw new Error(`Bad color: ${hex} (use six-digit hex)`); const [r, g, b] = m.slice(1).map((h) => { const c = parseInt(h, 16) / 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; }
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 const outRoot = join(root, "for");
@@ -35,12 +37,13 @@ for (const c of colleges) {
     html = html.replace(new RegExp(`(<div class="facet-panel" role="tabpanel" id="panel-${f}" aria-labelledby="tab-${f}")( hidden)?>`), `$1${on ? "" : " hidden"}>`);
   }
 
-  // The note itself, at the top of main.
+  // The note itself, at the top of main. The school's colour, if given, tints the card only.
+  const style = c.color ? ` style="--school:${c.color};--school-ink:${lum(c.color) > 0.35 ? "#17181c" : "#ffffff"}"` : "";
   const note = `
     <!-- School-specific note, generated from data/colleges.json -->
     <section class="for enter" style="--i:0" aria-labelledby="for-title">
-      <div class="for__card">
-        <p class="glass for__label"><span>For ${esc(c.name)}</span></p>
+      <div class="for__card${c.color ? " for__card--tinted" : ""}"${style}>
+        <p class="for__label"><span>For ${esc(c.name)}</span></p>
         <h2 id="for-title" class="serif for__title">A note for your admissions office.</h2>
         <p class="for__note">${esc(c.note)}</p>
         <p class="for__sign">Kaliph Howard · Chicago · Class of 2027</p>

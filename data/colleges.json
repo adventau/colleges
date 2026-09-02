@@ -4,6 +4,7 @@
     "name": "Example University",
     "short": "Example",
     "facet": "business",
-    "note": "This is a sample note so you can see how a school-specific page looks. Replace it with two or three specific sentences: the program, the people, or the thing you would do there that you cannot do anywhere else. Delete this entry before sending real links."
+    "note": "This is a sample note, tinted with a sample school colour. Replace it with two or three specific sentences: the program, the people, or the thing you would do there that you cannot do anywhere else. Delete this entry before sending real links.",
+    "color": "#4e2a84"
   }
 ]

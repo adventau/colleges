@@ -50,7 +50,7 @@ Both have system fallbacks, so the site is readable offline. No other third-part
 
 ## School-specific links
 
-`data/colleges.json` holds one entry per college: `slug`, `name`, `facet` (which of the five facets the page opens on) and `note` (two or three sentences addressed to that school). Run:
+`data/colleges.json` holds one entry per college: `slug`, `name`, `facet` (which of the five facets the page opens on), `note` (two or three sentences addressed to that school) and an optional `color` (the school's hex colour; it tints the note card only, and the label text colour is chosen for contrast automatically). No logos: they are trademarks and imply an affiliation. Run:
 
 ```bash
 npm run colleges
