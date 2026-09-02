@@ -1,27 +1,48 @@
-# Kaliph Howard Portfolio — Multi-page Concept
+# Kaliph Howard — portfolio
 
-An initial, design-first multi-page prototype for Kaliph Howard’s college-admissions portfolio. It is plain static HTML, CSS, and JavaScript so it can live directly on GitHub Pages without a build step.
+A personal college-admissions portfolio for Kaliph Howard (Chicago, Illinois, Class of 2027).
+Four real pages: Home, Work, About, Contact. Static HTML, CSS and JavaScript. No build step, no dependencies.
 
-## Preview locally
+## Run locally
 
 ```bash
 npm run dev
 ```
 
-Then open `http://127.0.0.1:4173`.
+Then open http://127.0.0.1:4173. (Any static server works; `npx serve .` or `python3 -m http.server` are fine too.)
 
-## Current direction
+`npm run check` syntax-checks the JavaScript.
 
-- Original one-screen editorial landing built around four expanding identity panels: leadership, technology, business, and community
-- Subtle pointer lighting, fluid panel transitions, and a reduced-motion fallback
-- The homepage introduces Kaliph and the atmosphere; project names and project storytelling stay on the dedicated Work page
-- Dedicated Home, Work, About, and Contact pages
-- Glossy liquid-glass navigation and interface details
-- Restrained type, lighting, and motion intended to feel custom and professional
-- Balanced project storytelling across community, entrepreneurship, technology, leadership, and design
-- Responsive behavior and reduced-motion support
-- No framework or external dependencies, so the concept is easy to open and iterate
+## Structure
 
-## Intended next pass
+```
+index.html            Home: name, place, year, introduction, the five facets, routes to About and Work
+work.html             Work: filterable project index with a sticky identity plate per project
+about.html            About: portrait + facts, biography in short sections, facet map
+contact.html          Contact: email (placeholder), location, school
+css/site.css          The whole design system (tokens, glass material, nav, pages, motion, responsive)
+js/site.js            Progressive enhancement: pointer light, facet tabs, project index, filters
+assets/               Portrait placeholder and favicon (SVG)
+scripts/dev-server.mjs  Zero-dependency preview server
+docs/DESIGN.md        Creative direction, research notes, content guide, what is still placeholder
+```
 
-Replace the portrait placeholder, confirm final project facts and metrics, refine the personal story, add individual case-study pages, replace the placeholder contact address, and copy the static files into the College GitHub repository when approved.
+## Editing content
+
+All copy lives in the HTML, next to `<!-- CONTENT: ... -->` comments.
+Anything wrapped in `<span class="tbd">` is a statement that needs Kaliph's confirmation and renders with a dashed underline until it is confirmed (remove the span to clear it).
+See `docs/DESIGN.md` for the full list of placeholders.
+
+## External resources
+
+Two typefaces are loaded from Google Fonts: **Fraunces** (display serif) and **Instrument Sans** (text).
+Both have system fallbacks, so the site is readable offline. No other third-party code.
+
+## Adding real photographs and screenshots
+
+- Portrait: replace `assets/portrait-placeholder.svg` with a photograph cropped to 4:5, then update the `alt` text and `<figcaption>` in `index.html` and `about.html`.
+- Project images: each project on the Work page has a `.plate`. Swap the typographic plate for an `<img>` when real screenshots exist. Do not add mockups of screens that do not exist.
+
+## Publishing
+
+Nothing is deployed. GitHub Pages is not enabled and no domain is configured. That is a separate decision.

@@ -1,90 +1,150 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080b12" />
-    <meta name="description" content="Kaliph Howard — student, builder, leader, and creative." />
-    <title>Kaliph Howard — Portfolio</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2226%22 fill=%22%23d8e5ff%22/><text x=%2250%22 y=%2267%22 text-anchor=%22middle%22 font-size=%2252%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22%23080b12%22>KH</text></svg>" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js" defer></script>
-  </head>
-  <body data-page="home">
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="ambient ambient--one" aria-hidden="true"></div>
-    <div class="ambient ambient--two" aria-hidden="true"></div>
-    <div class="grain" aria-hidden="true"></div>
+<html lang="en" class="no-js" data-facet="leadership">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kaliph Howard — Chicago, Class of 2027</title>
+  <meta name="description" content="Kaliph Howard is a student in Chicago, Illinois (Class of 2027) whose work crosses leadership, technology, business, community and design.">
+  <meta name="theme-color" content="#f3efe7">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/site.css">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
+  <script src="./js/site.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
 
-    <header class="nav-wrap">
-      <nav class="glass-nav" aria-label="Primary navigation">
-        <a class="nav-brand" href="./index.html" aria-label="Kaliph Howard, home">
-          <span>KH</span><i></i>
-        </a>
-        <div class="nav-pages">
-          <a data-nav="home" href="./index.html">Home</a>
-          <a data-nav="work" href="./work.html">Work</a>
-          <a data-nav="about" href="./about.html">About</a>
-        </div>
-        <a class="nav-contact" data-nav="contact" href="./contact.html">
-          <span>Contact</span><span aria-hidden="true">↗</span>
-        </a>
-      </nav>
-    </header>
+  <!-- Shared header: keep identical across pages except aria-current -->
+  <header class="site-head">
+    <a class="brand" href="./index.html">Kaliph Howard<small>Chicago · ’27</small></a>
+    <nav class="glass nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html" aria-current="page"><span class="nav__pill" aria-hidden="true"></span>Home</a></li>
+        <li><a href="./work.html">Work</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main id="main" class="portal-main">
-      <section class="portal-stage" aria-labelledby="home-title" data-portal data-active-lens="leadership">
-        <div class="portal-atmosphere" aria-hidden="true"><i></i><i></i><i></i></div>
+  <main id="main">
+    <!-- ============ HERO: name, place, year, one short introduction ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero__meta enter" style="--i:0">
+        <span class="eyebrow">Chicago, Illinois</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="eyebrow">Class of 2027</span>
+      </p>
 
-        <header class="portal-intro enter">
-          <p>Kaliph Howard · Chicago · Class of 2027</p>
-          <h1 id="home-title"><span>KALIPH</span><span>HOWARD</span></h1>
-          <div class="portal-summary">
-            <span>A look inside my world</span>
-            <p>I’m a student drawn to building things, bringing people together, and learning what makes an idea work.</p>
+      <h1 id="hero-title" class="display hero__title enter" style="--i:1">Kaliph <em>Howard</em></h1>
+
+      <!-- CONTENT: introduction. Keep it to three or four lines. -->
+      <p class="lede hero__lede enter" style="--i:2">
+        I’m a student who likes starting things and staying with them: <strong>a website for my class</strong>,
+        <strong>a community celebration</strong>, <strong>a brand and the software behind it</strong>, and
+        <strong>an online community built around a game</strong>.
+      </p>
+
+      <!-- CONTENT: portrait. Replace the SVG with a real photograph (4:5 crop works best) and update alt text. -->
+      <figure class="hero__portrait enter" style="--i:2">
+        <img src="./assets/portrait-placeholder.svg" width="800" height="1000" alt="Placeholder where a photograph of Kaliph Howard will go.">
+        <figcaption class="glass" style="border-radius:.8rem">Kaliph, 2026 <span>Photograph to be added</span></figcaption>
+      </figure>
+
+      <!-- ============ FACETS: the five sides of his world. Selecting one recolours the scene. ============ -->
+      <div class="facets enter" style="--i:3">
+        <div class="facets__row">
+          <p class="eyebrow eyebrow--accent" id="facets-label">Inside my world</p>
+          <div class="glass facets__tabs" role="tablist" aria-labelledby="facets-label">
+            <button class="facet-tab" role="tab" id="tab-leadership" aria-controls="panel-leadership" aria-selected="true" data-facet="leadership"><span class="n" aria-hidden="true">01</span>Leadership</button>
+            <button class="facet-tab" role="tab" id="tab-technology" aria-controls="panel-technology" aria-selected="false" tabindex="-1" data-facet="technology"><span class="n" aria-hidden="true">02</span>Technology</button>
+            <button class="facet-tab" role="tab" id="tab-business" aria-controls="panel-business" aria-selected="false" tabindex="-1" data-facet="business"><span class="n" aria-hidden="true">03</span>Business</button>
+            <button class="facet-tab" role="tab" id="tab-community" aria-controls="panel-community" aria-selected="false" tabindex="-1" data-facet="community"><span class="n" aria-hidden="true">04</span>Community</button>
+            <button class="facet-tab" role="tab" id="tab-design" aria-controls="panel-design" aria-selected="false" tabindex="-1" data-facet="design"><span class="n" aria-hidden="true">05</span>Design</button>
           </div>
-        </header>
+        </div>
 
-        <figure class="portal-photo enter enter--delay">
-          <img src="./assets/portrait-placeholder.svg" alt="Placeholder for Kaliph Howard’s portrait" />
-          <figcaption>Portrait placeholder</figcaption>
-        </figure>
-
-        <div class="portal-world enter enter--later">
-          <div class="portal-lenses" role="group" aria-label="Explore the parts of Kaliph’s world">
-            <button class="portal-lens is-active" type="button" data-lens="leadership" aria-pressed="true">
-              <i aria-hidden="true"></i><small>01</small><span>Leadership</span><p>Giving ideas direction.</p><b aria-hidden="true">↗</b>
-            </button>
-            <button class="portal-lens" type="button" data-lens="technology" aria-pressed="false">
-              <i aria-hidden="true"></i><small>02</small><span>Technology</span><p>Making useful things real.</p><b aria-hidden="true">↗</b>
-            </button>
-            <button class="portal-lens" type="button" data-lens="business" aria-pressed="false">
-              <i aria-hidden="true"></i><small>03</small><span>Business</span><p>Understanding how ideas grow.</p><b aria-hidden="true">↗</b>
-            </button>
-            <button class="portal-lens" type="button" data-lens="community" aria-pressed="false">
-              <i aria-hidden="true"></i><small>04</small><span>Community</span><p>Helping people feel connected.</p><b aria-hidden="true">↗</b>
-            </button>
+        <!-- CONTENT: one short note per facet. Sentences marked with class="tbd" need Kaliph's confirmation. -->
+        <div class="facet-panel" role="tabpanel" id="panel-leadership" aria-labelledby="tab-leadership">
+          <div>
+            <h2 class="serif">Organising people around something worth doing.</h2>
+            <p>Most of what I’ve built started with a group that needed a place to gather, a plan, or someone willing to go first. <span class="tbd" title="To be confirmed by Kaliph">Helping lead my class</span> and running an online community taught me the same lesson: people show up when the work is clear and someone is accountable for it.</p>
           </div>
+          <a class="glass cta facet-panel__link" href="./work.html#leadership">See the leadership work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
-
-        <aside class="portal-detail enter enter--later" aria-live="polite">
-          <span data-lens-number>01 / A part of my world</span>
-          <h2 data-lens-title>Leadership</h2>
-          <p data-lens-copy>Giving an idea direction, helping people contribute, and staying responsible for what happens next.</p>
-        </aside>
-
-        <div class="portal-actions enter enter--later">
-          <a href="./about.html">About me <span>↗</span></a>
-          <a href="./work.html">Enter the work <span>↗</span></a>
+        <div class="facet-panel" role="tabpanel" id="panel-technology" aria-labelledby="tab-technology" hidden>
+          <div>
+            <h2 class="serif">Building the thing instead of describing it.</h2>
+            <p>I build and run websites and internal tools: a class site with events, announcements and an admin dashboard, and the operations software behind my own brand. The part I care about most is when someone else logs in and it simply works.</p>
+          </div>
+          <a class="glass cta facet-panel__link" href="./work.html#technology">See the technology work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
+        <div class="facet-panel" role="tabpanel" id="panel-business" aria-labelledby="tab-business" hidden>
+          <div>
+            <h2 class="serif">Treating an idea like something that has to keep running.</h2>
+            <p>AVNT started as a name and a logo and became a small operation with its own tools, roles and routines. Business, for me, is the discipline of turning an interest into something that still works when I’m not looking at it.</p>
+          </div>
+          <a class="glass cta facet-panel__link" href="./work.html#business">See the business work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="facet-panel" role="tabpanel" id="panel-community" aria-labelledby="tab-community" hidden>
+          <div>
+            <h2 class="serif">Making room for people to belong.</h2>
+            <p>From a Juneteenth celebration in Lake County to an online community organised around a game, the projects I care about most are the ones where people find each other. The tools change. The job of making people feel welcome doesn’t.</p>
+          </div>
+          <a class="glass cta facet-panel__link" href="./work.html#community">See the community work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="facet-panel" role="tabpanel" id="panel-design" aria-labelledby="tab-design" hidden>
+          <div>
+            <h2 class="serif">Making things clear enough to be used.</h2>
+            <p>Design runs through everything else here: <span class="tbd" title="To be confirmed by Kaliph">a planner cover for my school</span>, the identity for AVNT, the layout of a page. I treat it as a supporting discipline, the way I make the rest of the work legible.</p>
+          </div>
+          <a class="glass cta facet-panel__link" href="./work.html#design">See the design work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </section>
 
-        <footer class="portal-footer">
-          <span>Move your pointer. Choose a lens.</span>
-          <span>Leadership · Technology · Business · Community</span>
-        </footer>
-      </section>
-    </main>
+    <!-- ============ STRANDS: the kinds of work, not the projects ============ -->
+    <ul class="strands" aria-label="Kinds of work">
+      <li style="--c:var(--leadership)">School leadership</li>
+      <li style="--c:var(--community)">Community events</li>
+      <li style="--c:var(--business)">Entrepreneurship</li>
+      <li style="--c:var(--technology)">Web development</li>
+      <li style="--c:var(--technology)">Product thinking</li>
+      <li style="--c:var(--design)">Visual communication</li>
+      <li style="--c:var(--community)">Digital community</li>
+    </ul>
 
-    <footer class="site-footer"><span>© <span data-year></span> Kaliph Howard</span><span>Built for the next chapter.</span><a href="./contact.html">Start a conversation ↗</a></footer>
-  </body>
+    <!-- ============ ROUTES: two doors, About and Work ============ -->
+    <nav class="routes" aria-label="Where to go next" style="margin-top:1.5rem">
+      <a class="route" href="./about.html">
+        <span class="eyebrow">About</span>
+        <h2 class="display">Who I am</h2>
+        <p>What pulls me in, how I work, and why leadership, community, business, technology and design turned out to be one interest rather than five.</p>
+        <span class="route__go">Read about me <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="route__mark" aria-hidden="true">K</span>
+      </a>
+      <a class="route" href="./work.html">
+        <span class="eyebrow">Work</span>
+        <h2 class="display">What I’ve built</h2>
+        <p>Seven entries, from a website for my graduating class to a community celebration and a brand with its own tools. An index, not a gallery.</p>
+        <span class="route__go">Open the index <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="route__mark" aria-hidden="true">07</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-foot">
+    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
+    <ul>
+      <li><a href="./work.html">Work</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    <span>© <span data-year>2026</span> Kaliph Howard</span>
+  </footer>
+</body>
 </html>

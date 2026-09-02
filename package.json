@@ -1,10 +1,11 @@
 {
   "name": "kaliph-howard-portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "description": "Kaliph Howard's college-admissions portfolio. Static HTML, CSS and JavaScript with no build step.",
   "scripts": {
-    "dev": "node server.mjs",
-    "check": "node --check script.js && node --check server.mjs"
+    "dev": "node scripts/dev-server.mjs",
+    "check": "node --check js/site.js && node --check scripts/dev-server.mjs"
   }
 }

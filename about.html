@@ -1,26 +1,127 @@
 <!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#080b12" /><meta name="description" content="About Kaliph Howard." /><title>About — Kaliph Howard</title><link rel="stylesheet" href="./styles.css" /><script src="./script.js" defer></script></head>
-  <body data-page="about">
-    <a class="skip-link" href="#main">Skip to content</a><div class="ambient ambient--four" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-    <header class="nav-wrap"><nav class="glass-nav" aria-label="Primary navigation"><a class="nav-brand" href="./index.html" aria-label="Kaliph Howard, home"><span>KH</span><i></i></a><div class="nav-pages"><a data-nav="home" href="./index.html">Home</a><a data-nav="work" href="./work.html">Work</a><a data-nav="about" href="./about.html">About</a></div><a class="nav-contact" data-nav="contact" href="./contact.html"><span>Contact</span><span aria-hidden="true">↗</span></a></nav></header>
-    <main id="main" class="about-profile">
-      <header class="about-heading enter"><p>About</p><h1>Kaliph Howard</h1></header>
-      <section class="about-immediate">
-        <figure class="about-photo enter"><img src="./assets/portrait-placeholder.svg" alt="Placeholder for Kaliph Howard’s portrait" /><figcaption>Portrait placeholder</figcaption></figure>
-        <div class="about-bio enter enter--delay">
-          <p>I’m a student in Chicago who enjoys turning early ideas into projects people can actually use, join, or experience.</p>
-          <p>My work has moved between software, digital communities, student leadership, events, business, and visual design. The subjects change, but the role is usually similar: understand what is needed, organize the work, and help move it forward.</p>
-          <p>This portfolio brings those different parts together without reducing them to a list of titles.</p>
-        </div>
-        <dl class="about-facts enter enter--later">
-          <div><dt>Location</dt><dd>Chicago, Illinois</dd></div>
-          <div><dt>Education</dt><dd>High school student · Class of 2027</dd></div>
-          <div><dt>Interests</dt><dd>Technology, business, leadership, design, community</dd></div>
-          <div><dt>Selected projects</dt><dd>AVNT, WTHS ’27, Playverse, Lake County Juneteenth</dd></div>
+<html lang="en" class="no-js" data-facet="leadership">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>About — Kaliph Howard</title>
+  <meta name="description" content="Who Kaliph Howard is, what interests him, and how leadership, community, business, technology and design connect in his work.">
+  <meta name="theme-color" content="#f3efe7">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/site.css">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
+  <script src="./js/site.js" defer></script>
+</head>
+<body data-page="about">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="site-head">
+    <a class="brand" href="./index.html">Kaliph Howard<small>Chicago · ’27</small></a>
+    <nav class="glass nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./work.html">Work</a></li>
+        <li><a href="./about.html" aria-current="page"><span class="nav__pill" aria-hidden="true"></span>About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <div class="about">
+      <header class="about__head">
+          <p class="eyebrow eyebrow--accent enter" style="--i:0">About</p>
+          <h1 class="display about__title enter" style="--i:1">Kaliph Howard</h1>
+          <p class="lede enter" style="--i:2">A student in Chicago. I build websites, run a small brand, and help organise the people around me.</p>
+        </header>
+
+      <!-- Left: portrait and facts. Sticky on desktop, inline on mobile. -->
+      <aside class="about__aside enter" style="--i:1" aria-label="At a glance">
+        <!-- CONTENT: replace with a real photograph and update alt text -->
+        <figure class="about__portrait">
+          <img src="./assets/portrait-placeholder.svg" width="800" height="1000" alt="Placeholder where a photograph of Kaliph Howard will go.">
+          <figcaption class="glass" style="border-radius:.8rem">Photograph to be added</figcaption>
+        </figure>
+        <dl class="facts">
+          <div><dt>Name</dt><dd>Kaliph Howard</dd></div>
+          <div><dt>Home</dt><dd>Chicago, Illinois</dd></div>
+          <div><dt>School</dt><dd>Warren Township High School, Class of 2027</dd></div>
+          <div><dt>Areas</dt><dd>Leadership, technology, business, community, design</dd></div>
         </dl>
-      </section>
-    </main>
-    <footer class="site-footer"><span>© <span data-year></span> Kaliph Howard</span><span>About</span><a href="./contact.html">Continue to Contact →</a></footer>
-  </body>
+      </aside>
+
+      <!-- Right: the biography. Content is meant to be read top to bottom. -->
+      <div class="about__body">
+
+        <!-- CONTENT: Who I am -->
+        <section class="enter" style="--i:3" aria-labelledby="h-who">
+          <h2 id="h-who">Who I am</h2>
+          <div class="prose">
+            <p>I’m a senior at Warren Township High School, in the Class of 2027, and most of what I do outside class comes down to one habit: when something is missing, I try to make it.</p>
+            <p>That has meant a website for my class when there wasn’t one, a brand and the tools to run it, and a lot of time organising people, whether in person or in an online community. I don’t think of these as separate hobbies. They are the same instinct pointed at different rooms.</p>
+          </div>
+        </section>
+
+        <!-- CONTENT: What pulls me in -->
+        <section class="enter" style="--i:4" aria-labelledby="h-pull">
+          <h2 id="h-pull">What pulls me in</h2>
+          <div class="prose">
+            <p>I’m drawn to the moment a group becomes a thing: a class that has a place to find out what’s happening, a community that has a celebration to gather around, a team that has a way of working.</p>
+            <p>Technology is how I usually get there, because a website or a tool is the fastest way to give a group somewhere to stand. Business is how I make sure it keeps running. Design is how I make it clear. Leadership is the part where someone has to go first.</p>
+          </div>
+        </section>
+
+        <!-- CONTENT: How the parts connect. Hovering or focusing a card recolours the page. -->
+        <section class="enter" style="--i:5" aria-labelledby="h-map">
+          <h2 id="h-map">How the parts connect</h2>
+          <ul class="map">
+            <li data-facet="leadership" tabindex="0" style="--c:var(--leadership);--c-ink:var(--leadership-ink)"><b>Leadership</b><span>Taking responsibility for a group and the plan.</span></li>
+            <li data-facet="community" tabindex="0" style="--c:var(--community);--c-ink:var(--community-ink)"><b>Community</b><span>Making a place people want to come back to.</span></li>
+            <li data-facet="business" tabindex="0" style="--c:var(--business);--c-ink:var(--business-ink)"><b>Business</b><span>Turning an idea into something that keeps running.</span></li>
+            <li data-facet="technology" tabindex="0" style="--c:var(--technology);--c-ink:var(--technology-ink)"><b>Technology</b><span>Building the tool instead of waiting for one.</span></li>
+            <li data-facet="design" tabindex="0" style="--c:var(--design);--c-ink:var(--design-ink)"><b>Design</b><span>Making all of it clear enough to use.</span></li>
+          </ul>
+        </section>
+
+        <!-- CONTENT: What I've learned -->
+        <section class="enter" style="--i:6" aria-labelledby="h-learned">
+          <h2 id="h-learned">What I’ve learned</h2>
+          <div class="prose">
+            <p>Shipping is a smaller part of the job than I expected. Keeping something accurate, moderated and alive after launch is most of it.</p>
+            <p>I’ve also learned that people will help if you make it easy: give them a role, a form, a log of what happened, and they show up. Almost every project here got better the moment it stopped being only mine.</p>
+          </div>
+        </section>
+
+        <!-- CONTENT: What's next. Placeholder until Kaliph writes it; do not invent goals. -->
+        <section class="enter" style="--i:7" aria-labelledby="h-next">
+          <h2 id="h-next">What’s next</h2>
+          <div class="prose">
+            <p class="note"><strong>To be written by Kaliph.</strong> What he wants to explore next: the kinds of problems, teams and fields he is curious about. Nothing has been assumed here.</p>
+          </div>
+        </section>
+
+        <section class="enter" style="--i:8" aria-label="Continue">
+          <h2>Continue</h2>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <a class="glass cta" href="./work.html">See the work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="glass cta" href="./contact.html">Get in touch <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./work.html">Work</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    <span>© <span data-year>2026</span> Kaliph Howard</span>
+  </footer>
+</body>
 </html>
