@@ -665,7 +665,8 @@ ul, ol { margin: 0; padding: 0; }
 .for + .hero { min-height: 0; padding-top: clamp(2rem, 5vw, 4rem); }
 .for__card { position: relative; max-width: 46rem; padding: clamp(1.4rem, 3vw, 2rem) clamp(1.4rem, 3vw, 2.2rem); border: 1px solid var(--line-strong); border-radius: calc(var(--radius) * 1.3); background: rgb(255 255 255 / 0.45); box-shadow: 0 24px 50px -36px rgb(23 24 28 / 0.4); }
 .for__label { display: inline-flex; margin: 0 0 1rem; padding: 0.45rem 0.95rem; border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--paper); background: var(--ink); }
-.for__card--tinted { border-color: color-mix(in oklab, var(--school) 45%, var(--line-strong)); background: linear-gradient(135deg, color-mix(in oklab, var(--school) 9%, rgb(255 255 255 / 0.55)), rgb(255 255 255 / 0.45)); box-shadow: inset 0 3px 0 var(--school), 0 24px 50px -36px color-mix(in oklab, var(--school) 60%, rgb(23 24 28 / 0.4)); }
+.for__card--tinted { overflow: hidden; border-color: color-mix(in oklab, var(--school) 45%, var(--line-strong)); background: linear-gradient(135deg, color-mix(in oklab, var(--school) 11%, rgb(255 255 255 / 0.55)) 0%, rgb(255 255 255 / 0.5) 55%, color-mix(in oklab, var(--school-2) 14%, rgb(255 255 255 / 0.5)) 100%); box-shadow: 0 24px 50px -36px color-mix(in oklab, var(--school) 60%, rgb(23 24 28 / 0.4)); }
+.for__card--tinted::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--school), var(--school-2)); }
 .for__card--tinted .for__label { background: var(--school); color: var(--school-ink); }
 .for__title { font-size: clamp(1.5rem, 1.2rem + 1.6vw, 2.3rem); margin-bottom: 0.6rem; }
 .for__note { color: var(--ink); font-size: 1.08rem; line-height: 1.55; text-wrap: pretty; }

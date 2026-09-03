@@ -38,7 +38,10 @@ for (const c of colleges) {
   }
 
   // The note itself, at the top of main. The school's colour, if given, tints the card only.
-  const style = c.color ? ` style="--school:${c.color};--school-ink:${lum(c.color) > 0.35 ? "#17181c" : "#ffffff"}"` : "";
+  // One colour tints the card; a second (color2) turns the rule and wash into a gradient between them.
+  const c2 = c.color2 || c.color;
+  if (c.color2) lum(c.color2);
+  const style = c.color ? ` style="--school:${c.color};--school-2:${c2};--school-ink:${lum(c.color) > 0.35 ? "#17181c" : "#ffffff"}"` : "";
   const note = `
     <!-- School-specific note, generated from data/colleges.json -->
     <section class="for enter" style="--i:0" aria-labelledby="for-title">
