@@ -1,10 +1,10 @@
 [
   {
-    "slug": "example",
-    "name": "Example University",
-    "short": "Example",
-    "facet": "business",
-    "note": "This is a sample note, tinted with a sample school colour. Replace it with two or three specific sentences: the program, the people, or the thing you would do there that you cannot do anywhere else. Delete this entry before sending real links.",
-    "color": "#4e2a84"
+    "slug": "ncat",
+    "name": "North Carolina A&T State University",
+    "short": "N.C. A&T",
+    "facet": "leadership",
+    "color": "#004684",
+    "note": "N.C. A&T is my first-choice university because I can genuinely picture myself becoming part of the Aggie community. It brings together what matters most to me: Black excellence, student leadership, service, and the freedom to develop ambitious ideas. Serving as Student Council President and leading the National Independent Black Student Union has shown me how important it is for students to have a meaningful voice, which is why A&T’s Student Government Association interests me so deeply. I hope to contribute to that tradition of student leadership while growing as an entrepreneur and building ideas that strengthen the communities around me."
   }
 ]
