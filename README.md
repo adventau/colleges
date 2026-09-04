@@ -1,5 +1,7 @@
 # Kaliph Howard — portfolio
 
+Live at https://adventau.github.io/colleges/ (GitHub Pages, served from `main`). Every push to `main` deploys. The site lives under the `/colleges/` subpath, so `404.html` uses `/colleges/`-prefixed paths; update those if the site moves to a custom domain at the root.
+
 A personal college-admissions portfolio for Kaliph Howard (Chicago, Illinois, Class of 2027).
 Four real pages: Home, Work, About, Contact. Static HTML, CSS and JavaScript. No build step, no dependencies.
 
