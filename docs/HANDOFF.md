@@ -4,7 +4,7 @@ Written 5 September 2026, after a full-day redesign session with Kaliph. Read th
 
 ## 1. Where things stand
 
-- **The whole redesign is uncommitted.** `git status` shows 24 changed or new files in the working tree of `adventau/colleges`. Nothing has been pushed. Kaliph never asked for a commit; ask before committing, and never enable GitHub Pages or deploy anywhere. The site runs on localhost only (`npm run dev`, port 4173). He has Railway if real hosting ever comes up, but only on his explicit request.
+- **Committed and pushed** to `main` of `adventau/colleges` on 5 September 2026 at Kaliph's request (commit 07738ac). Ask before committing further work, and never enable GitHub Pages or deploy anywhere. The site runs on localhost only (`npm run dev`, port 4173). He has Railway if real hosting ever comes up, but only on his explicit request.
 - **The site works.** All pages load without console errors, every local link and image resolves, and every page holds at 375px wide with no horizontal overflow.
 - **What is live at http://127.0.0.1:4173:** home, Work (a dated timeline of 20 entries), About, Contact, six case studies, the N.C. A&T school page, and a 404.
 
@@ -62,13 +62,13 @@ Confirmed dates: AVNT founded early 2024; joined Playverse's team September 2023
 
 ## 5. Open items, in priority order
 
-1. **Commit.** Ask him, then commit the working tree in one go. Suggested message: "Redesign: warm stone editorial, portrait, timeline Work page, generated pages". Include `.claude/launch.json` or add it to `.gitignore`; it only exists so the app's browser pane can attach to the dev server.
-2. **Show Kaliph what changed on 5 September** before it goes further: the Playverse page retitle, the new activities PDF (including the new "Project management for Roblox teams" entry), and the new `assets/og.png`. All three reuse wording he already approved, but he has not seen them assembled.
+1. **Show Kaliph what changed on 5 September** before it goes further: the Playverse page retitle, the new activities PDF (including the new "Project management for Roblox teams" entry), and the new `assets/og.png`. All three reuse wording he already approved, but he has not seen them assembled.
 
 Closed on 5 September 2026 (details in `DESIGN.md`):
 
 - **Activities PDF** regenerated from an updated `data/activities.json`. ReportLab is not installed system-wide; the README shows the one-line venv recipe. The PDF must stay one page; padding in `scripts/build-activities.py` was tightened to keep it there.
 - **Social preview image** regenerated at 1200×630 in the stone palette from `scripts/og-template.html` via `npm run og`.
+- **Commit** done on 5 September at Kaliph's request; `.claude/` (the app's launch config) is now in `.gitignore`.
 - **Managed-project detail pages: not doing them.** Kaliph said on 5 September he has no further details for those projects, so a page would only restate the timeline paragraph. Leave the entries as they are. Revisit only if he offers specifics (a decision he made, a hire or partner he brought in, a launch problem he handled, a figure that was his rather than the team's).
 - **Student Council start date** confirmed as August 2026 (the current school year) and added to the timeline, the case study, and the activities summary.
 - **Playverse case study** retitled "Playverse" and restructured as the studio page, with the two Playverse games in one section.
