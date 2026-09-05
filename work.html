@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Work — Kaliph Howard</title>
-  <meta name="description" content="Selected work by Kaliph Howard: a class website, a community Juneteenth celebration, a brand and its operations software, and more.">
-  <meta name="theme-color" content="#f3efe7">
+  <meta name="description" content="Selected work by Kaliph Howard in student leadership, community, business, technology, and design.">
+  <meta name="theme-color" content="#f5f7fc">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Work — Kaliph Howard">
-  <meta property="og:description" content="Student government, a FIFA-licensed game, a Black Student Union, a Juneteenth celebration, a brand, and the software under it.">
+  <meta property="og:description" content="Selected work by Kaliph Howard in student leadership, community, business, technology, and design.">
   <meta property="og:image" content="./assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
@@ -24,7 +24,7 @@
   <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
 
   <header class="site-head">
-    <a class="brand" href="./index.html">Kaliph Howard<small>Chicago · ’27</small></a>
+    <a class="brand" href="./index.html"><span class="brand__mark" aria-hidden="true">kh.</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
     <nav class="glass nav" aria-label="Primary">
       <ul>
         <li><a href="./index.html">Home</a></li>
@@ -35,160 +35,23 @@
     </nav>
   </header>
 
-  <main id="main" class="page">
-    <header class="page-head">
-      <p class="eyebrow eyebrow--accent enter" style="--i:0">Work</p>
-      <h1 class="display enter" style="--i:1">What I lead, and what I built to run it.</h1>
-      <p class="lede enter" style="--i:2">Eight entries, biggest first. Open a row for what each one is, what I did, and what I took from it. Six have full case studies.</p>
-      <div class="glass filters enter" style="--i:3" role="group" aria-label="Filter projects by area">
-        <button class="filter" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter" data-filter="leadership" aria-pressed="false">Leadership</button>
-        <button class="filter" data-filter="technology" aria-pressed="false">Technology</button>
-        <button class="filter" data-filter="business" aria-pressed="false">Business</button>
-        <button class="filter" data-filter="community" aria-pressed="false">Community</button>
-        <button class="filter" data-filter="design" aria-pressed="false">Design</button>
-      </div>
-    </header>
-
-    <div class="index">
-      <!-- ================= PROJECT INDEX =================
-           Each <li class="project"> is one entry. Attributes:
-             id            — deep link target (work.html#playverse)
-             data-facet    — the hue this project colours the page with
-             data-facets   — space-separated areas used by the filters
-             class project--lead — larger row with an always-visible summary
-           Text marked class="tbd" needs Kaliph's confirmation. Case studies live in /work/. -->
-      <ol class="index__list enter" style="--i:4">
-
-        <li class="project project--lead" id="student-council" data-facet="leadership" data-facets="leadership technology community" style="--c:var(--leadership);--c-ink:var(--leadership-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-student-council">
-            <span class="project__num">01</span>
-            <span class="project__title">Student Council President<small>Leading the Class of 2027 at Warren Township High School, and the website I built so senior year runs in one place.</small></span>
-            <span class="project__kind">Leadership · Technology</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-student-council" hidden>
-            <div class="plate plate--img" style="--c:var(--leadership);--c-ink:var(--leadership-ink)"><img src="./assets/work/wths-home.jpg" width="1440" height="900" alt="" loading="lazy"><span class="plate__cap">wths2027.com</span><span class="plate__sub">Student Council · Class site</span></div>
-            <div><h3>What it is</h3><p>As Student Council President, senior year is the heaviest version of the job: Senior Sunrise, homecoming, yearbook deadlines, prom and graduation, and a hundred questions a week about all of them.</p><p>In 2026 I built wths2027.com so the class has one place for events with RSVPs, announcements, deadlines, a photo gallery, senior spotlights and an opt-in directory, run from an admin dashboard with roles so other students can help.</p></div>
-            <div><h3>My part</h3><p>President. I designed, built and run the site, the class Instagram and the senior events.</p><h3 style="margin-top:1rem">What I took from it</h3><p>The best thing I did as president this year was build something that works when I am not in the room.</p></div><ul class="stack" aria-label="Built with"><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>SQLite</li><li>Docker on Railway</li></ul><p class="project__foot" style="grid-column:1/-1;color:var(--ink-2)">First month, from the site’s own analytics: 1,101 visits and 1,860 page views. The class Instagram, @2027wths, has passed 72,000 views.</p><figure class="project__figure"><img src="./assets/work/wths-events.jpg" width="1440" height="900" alt="The events page of wths2027.com with category filters and event posters." loading="lazy"><figcaption>wths2027.com, events</figcaption></figure><p class="project__foot"><a class="glass cta" href="./work/wths.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://wths2027.com" rel="noopener">Visit wths2027.com</a></p>
-          </div>
-        </li>
-
-        <li class="project project--lead" id="playverse" data-facet="business" data-facets="business leadership community" style="--c:var(--business);--c-ink:var(--business-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-playverse">
-            <span class="project__num">02</span>
-            <span class="project__title">Playverse / Super League Soccer<small>Project manager on FIFA Super Soccer, formerly Super League Soccer: a FIFA-licensed Roblox game with more than 1.5 billion visits.</small></span>
-            <span class="project__kind">Business · Leadership</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-playverse" hidden>
-            <div class="plate plate--img" style="--c:var(--business);--c-ink:var(--business-ink)"><img src="./assets/work/fifa-super-soccer-roblox.jpg" width="1440" height="900" alt="" loading="lazy"><span class="plate__cap">FIFA Super Soccer · Roblox</span><span class="plate__sub">1.5 billion visits</span></div>
-            <div><h3>What it is</h3><p>Super League Soccer launched on Roblox in January 2023, built by Playverse. It became the most successful sports launch in Roblox history and, after an official licensing partnership with FIFA, was renamed FIFA Super Soccer. As of September 2026 it has more than 1.5 billion visits and over a million favourites. The studio’s Play! Studios group has 4.3 million members and the game’s own group, Play! Football, has 1.9 million. For the FIFA Club World Cup 2025 the studio brought twelve licensed clubs into the game.</p></div>
-            <div><h3>My part</h3><p>Project manager, about twelve hours a week. I run the priorities and the calendar, own the brand and social channels, and handle partnerships, including the licensed branding. I grew the studio’s X account, <a href="https://x.com/PlayverseStudio" rel="noopener">@PlayverseStudio</a>, to 130,000 followers.</p><h3 style="margin-top:1rem">What I took from it</h3><p>A game with a billion visits is a business with a schedule. I learned to run one, and to be accountable to a brand that is not mine.</p></div>
-            <p class="project__foot"><a class="glass cta" href="./work/playverse.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.roblox.com/games/12177325772/FIFA-Super-Soccer" rel="noopener">The game on Roblox</a></p>
-          </div>
-        </li>
-
-        <li class="project project--lead" id="bsu" data-facet="community" data-facets="community leadership" style="--c:var(--community);--c-ink:var(--community-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-bsu">
-            <span class="project__num">03</span>
-            <span class="project__title">National Independent Black Student Union<small>President of an independent Black Student Union that draws students from four Lake County districts. More than sixty events.</small></span>
-            <span class="project__kind">Community · Leadership</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-bsu" hidden>
-            <div class="plate" style="--c:var(--community);--c-ink:var(--community-ink)"><span class="plate__cap">Lake County, Illinois</span><span class="plate__word">NIBSU</span><span class="plate__sub">60+ events</span></div>
-            <div><h3>What it is</h3><p>The National Independent Black Student Union is organised outside any single school so that students from four districts across Lake County can take part. We run kickoffs and large meetings in rented spaces, bowling alleys and restaurants, so students from different schools actually meet, and we bring in state representatives and senators to speak to students about how the state works and what is open to them.</p></div>
-            <div><h3>My part</h3><p>President, grades 10 to 12. More than sixty events planned and run.</p><h3 style="margin-top:1rem">What I took from it</h3><p>Sixty events is sixty rooms to fill. I learned that people come back when they were welcomed the first time, and that the second event is the one that decides whether there is a third.</p></div><p class="project__foot"><a class="glass cta" href="./work/nibsu.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span>Photographs to be added</span></p>
-          </div>
-        </li>
-
-        <li class="project" id="juneteenth" data-facet="community" data-facets="community leadership" style="--c:var(--community);--c-ink:var(--community-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-juneteenth">
-            <span class="project__num">04</span>
-            <span class="project__title">Juneteenth Lake County</span>
-            <span class="project__kind">Community · Leadership</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-juneteenth" hidden>
-            <div class="plate" style="--c:var(--community);--c-ink:var(--community-ink)"><span class="plate__cap">Lake County, Illinois</span><i class="plate--sun" aria-hidden="true"></i><span class="plate__word">June<br>19</span><span class="plate__sub">Community celebration</span></div>
-            <div><h3>What it is</h3><p>Juneteenth Lake County is a three-day parade and festival run by the Greater Waukegan Development Coalition, with music, food, artisans and Black-owned businesses. After three years at Waukegan Harbor it moved to Foss Park in North Chicago for 2024.</p></div>
-            <div><h3>My part</h3><p>Volunteer manager for the 2024 festival, the first year at Foss Park after three years at Waukegan Harbor. I coordinated volunteers on the ground and helped vendors get set up and running on festival days.</p></div><p class="project__foot"><a class="glass cta" href="./work/juneteenth.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://juneteenthlakecounty.com" rel="noopener">juneteenthlakecounty.com</a></p>
-          </div>
-        </li>
-
-        <li class="project" id="avnt" data-facet="business" data-facets="business design technology" style="--c:var(--business);--c-ink:var(--business-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-avnt">
-            <span class="project__num">05</span>
-            <span class="project__title">AVNT Brand</span>
-            <span class="project__kind">Business · Design · Technology</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-avnt" hidden>
-            <div class="plate plate--logo" style="--c:var(--business);--c-ink:var(--business-ink)"><span class="plate__cap">Identity, operations, tools</span><img src="./assets/work/avnt-wordmark.svg" width="1200" height="300" alt="" loading="lazy"><span class="plate__sub">Brand</span></div>
-            <div><h3>What it is</h3><p>AVNT began as a monogram and a wordmark and became a small operation supporting online project teams. I built the software it runs on: an internal operations dashboard with a task board, contacts, a Discord server builder, a shared ban list and an automatic log; a public website with its own content system; and a Discord bot with a natural-language layer.</p></div>
-            <div><h3>My part</h3><p>Founder. I designed the identity and built the software behind it.</p><h3 style="margin-top:1rem">What I took from it</h3><p>A brand is mostly the routines behind it. Giving a second person their own account and their own log taught me more about running something than the logo did.</p></div><ul class="stack" aria-label="Built with"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Prisma</li><li>Clerk</li><li>Python</li></ul><p class="project__foot"><a class="glass cta" href="./work/avnt.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-          </div>
-        </li>
-
-        <li class="project" id="claudekat" data-facet="technology" data-facets="technology design" style="--c:var(--technology);--c-ink:var(--technology-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-claudekat">
-            <span class="project__num">06</span>
-            <span class="project__title">ClaudeKat · Royal Vault</span>
-            <span class="project__kind">Technology · Design</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-claudekat" hidden>
-            <div class="plate plate--img" style="--c:var(--technology);--c-ink:var(--technology-ink)"><img src="./assets/work/royal-vault-login.jpg" width="1440" height="900" alt="" loading="lazy"><span class="plate__cap">Royal Vault</span><span class="plate__sub">Private app · iOS shell</span></div>
-            <div><h3>What it is</h3><p>A private web app built for two people: encrypted messaging, files, notes and personal tools behind a single password, with a native iOS shell that adds Face ID. Messages are encrypted at rest, uploads are re-encoded with metadata stripped, and everything is session-gated.</p></div>
-            <div><h3>My part</h3><p>Design and full-stack development, end to end: the Node.js server, the real-time layer, the media pipeline, the themes and the iOS wrapper.</p><h3 style="margin-top:1rem">What I took from it</h3><p>Building for two people is harder than building for a crowd. There is nowhere to hide a rough edge.</p></div><ul class="stack" aria-label="Built with"><li>Node.js</li><li>Express</li><li>Socket.IO</li><li>PostgreSQL</li><li>Capacitor</li></ul><p class="project__foot"><a class="glass cta" href="./work/claudekat.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-          </div>
-        </li>
-
-        <li class="project" id="school-design" data-facet="design" data-facets="design community" style="--c:var(--design);--c-ink:var(--design-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-school-design">
-            <span class="project__num">07</span>
-            <span class="project__title">School design work</span>
-            <span class="project__kind">Design · Community</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-school-design" hidden>
-            <div class="plate" style="--c:var(--design);--c-ink:var(--design-ink)"><span class="plate__cap">Print and apparel</span><i class="plate--sheets" aria-hidden="true"><i></i><i></i><i></i></i><span class="plate__sub">Visual communication</span></div>
-            <div><h3>What it is</h3><p><span class="tbd" title="To be confirmed by Kaliph">The cover design for the school planner, later reproduced on shirts and hoodies.</span> <span class="tbd" title="Placeholder">Other pieces for school events and the class will be added here as they are gathered.</span></p></div>
-            <div><h3>What I took from it</h3><p>Design for a school is design for people who did not ask for it. The work has to be clear at a glance and hold up when it is printed small, printed large, or worn.</p></div><p class="project__foot"><span>Images to follow</span></p>
-          </div>
-        </li>
-
-        <li class="project" id="more" data-facet="technology" data-facets="technology" style="--c:var(--technology);--c-ink:var(--technology-ink)">
-          <button class="project__row" aria-expanded="false" aria-controls="body-more">
-            <span class="project__num">08</span>
-            <span class="project__title">More to code</span>
-            <span class="project__kind">Technology</span>
-            <span class="project__toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project__body" id="body-more" hidden>
-            <div class="plate" style="--c:var(--technology);--c-ink:var(--technology-ink)"><span class="plate__cap">Ongoing</span><span class="plate--code plate--cursor">next</span><span class="plate__sub">Smaller builds</span></div>
-            <div><h3>What it is</h3><p>Smaller builds that keep my hands moving between the big ones.</p></div>
-            <div><ul class="prose" style="list-style:none;display:grid;gap:.5rem;color:var(--ink-2)"><li><strong style="color:var(--ink)">Kaliph OS.</strong> A personal dashboard in React and Vite with an Express back end: Gmail, calendar, Last.fm, weather, a project tracker and my grades on one screen.</li><li><strong style="color:var(--ink)">AVNT bot.</strong> A Python Discord bot with tickets, moderation tools and a natural-language operations layer.</li><li><strong style="color:var(--ink)">Community bot.</strong> A discord.js bot with MongoDB for a Roblox community server: giveaways, staff commands and branded embeds.</li><li><strong style="color:var(--ink)">Server join.</strong> A small Python utility for Discord server onboarding.</li></ul></div><p class="project__foot"><span>In progress</span></p>
-          </div>
-        </li>
-      </ol>
-
-      <!-- Sticky preview (desktop only): the plate of whichever row is hovered, focused or open. -->
-      <aside class="index__preview enter" style="--i:5" aria-hidden="true">
-        <div class="plate-stack">
-          <div data-for="student-council" class="plate is-active plate--img" style="--c:var(--leadership);--c-ink:var(--leadership-ink)"><img src="./assets/work/wths-home.jpg" width="1440" height="900" alt="" loading="lazy"><span class="plate__cap">wths2027.com</span><span class="plate__sub">Student Council · Class site</span></div>
-          <div data-for="playverse" class="plate plate--img" style="--c:var(--business);--c-ink:var(--business-ink)"><img src="./assets/work/fifa-super-soccer-roblox.jpg" width="1440" height="900" alt="" loading="lazy"><span class="plate__cap">FIFA Super Soccer · Roblox</span><span class="plate__sub">1.5 billion visits</span></div>
-          <div data-for="bsu" class="plate" style="--c:var(--community);--c-ink:var(--community-ink)"><span class="plate__cap">Lake County, Illinois</span><span class="plate__word">NIBSU</span><span class="plate__sub">60+ events</span></div>
-          <div data-for="juneteenth" class="plate" style="--c:var(--community);--c-ink:var(--community-ink)"><span class="plate__cap">Lake County, Illinois</span><i class="plate--sun" aria-hidden="true"></i><span class="plate__word">June<br>19</span><span class="plate__sub">Community celebration</span></div>
-          <div data-for="avnt" class="plate plate--logo" style="--c:var(--business);--c-ink:var(--business-ink)"><span class="plate__cap">Identity, operations, tools</span><img src="./assets/work/avnt-wordmark.svg" width="1200" height="300" alt="" loading="lazy"><span class="plate__sub">Brand</span></div>
-          <div data-for="claudekat" class="plate plate--img" style="--c:var(--technology);--c-ink:var(--technology-ink)"><img src="./assets/work/royal-vault-login.jpg" width="1440" height="900" alt="" loading="lazy"><span class="plate__cap">Royal Vault</span><span class="plate__sub">Private app · iOS shell</span></div>
-          <div data-for="school-design" class="plate" style="--c:var(--design);--c-ink:var(--design-ink)"><span class="plate__cap">Print and apparel</span><i class="plate--sheets" aria-hidden="true"><i></i><i></i><i></i></i><span class="plate__sub">Visual communication</span></div>
-          <div data-for="more" class="plate" style="--c:var(--technology);--c-ink:var(--technology-ink)"><span class="plate__cap">Ongoing</span><span class="plate--code plate--cursor">next</span><span class="plate__sub">Smaller builds</span></div>
-        </div>
-      </aside>
-    </div>
-  </main>
+  <main id="main" class="page"><header class="page-head work-heading"><p class="eyebrow eyebrow--accent">Selected work</p><h1 class="display">Different interests.<br><em>A reason to build.</em></h1><p class="lede">School leadership, community events, business, and technology. Each project shows what I worked on and how I contributed.</p><div class="link-row"><a class="glass cta" href="./assets/kaliph-howard-activities.pdf">Activities summary · PDF <span aria-hidden="true">↗</span></a></div></header>
+ <div class="work-controls"><div class="glass filters" role="group" aria-label="Filter work"><button class="filter" data-filter="all" aria-pressed="true">All work</button><button class="filter" data-filter="leadership" aria-pressed="false">Leadership</button><button class="filter" data-filter="community" aria-pressed="false">Community</button><button class="filter" data-filter="business" aria-pressed="false">Business</button><button class="filter" data-filter="technology" aria-pressed="false">Technology</button><button class="filter" data-filter="design" aria-pressed="false">Design</button></div><p class="work-count" role="status" aria-live="polite" data-work-count>6 projects</p></div>
+ <div class="index"><ol class="index__list"><li class="project" id="student-council" data-facet="leadership" data-facets="leadership technology community design" style="--c:var(--leadership);--c-ink:var(--leadership-ink)">
+      <button class="project__row" aria-expanded="false" aria-controls="body-student-council"><span class="project__num">01</span><span class="project__title">Student Council & Class of 2027<small>Event leadership · Separate website project</small></span><span class="project__toggle" aria-hidden="true">+</span></button>
+      <div class="project__body" id="body-student-council" hidden><div class="plate plate--img"><img src="./assets/work/wths-home.jpg" alt="" loading="lazy"><span class="plate__cap">Student Council & Class of 2027</span><span class="plate__sub">Event leadership · Separate website project</span></div><div><h3>The project</h3><p>School event planning and committee leadership, alongside a separate website project for my classmates.</p></div><div><h3>My contribution</h3><p>As Student Council President, I plan events and lead committees, including royalty and social media. I also help staff when needed. Separately, I designed, built, and maintain the Class of 2027 website.</p></div><p class="project__foot"><a class="glass cta" href="./work/wths.html">Explore Student Council & Class of 2027 <span aria-hidden="true">↗</span></a></p></div></li><li class="project" id="bsu" data-facet="community" data-facets="community leadership" style="--c:var(--community);--c-ink:var(--community-ink)">
+      <button class="project__row" aria-expanded="false" aria-controls="body-bsu"><span class="project__num">02</span><span class="project__title">National Independent Black Student Union<small>President · Student community</small></span><span class="project__toggle" aria-hidden="true">+</span></button>
+      <div class="project__body" id="body-bsu" hidden><div class="plate"><span class="plate__cap">Lake County, Illinois</span><span class="plate__word">NIBSU</span><span class="plate__sub">President · Student community</span></div><div><h3>The project</h3><p>An independent student organization connecting Black students across four Lake County districts.</p></div><div><h3>My contribution</h3><p>As president, I help plan and run kickoffs and social events, including bowling and restaurant gatherings. A state representative and a senator have also attended our events.</p></div><p class="project__foot"><a class="glass cta" href="./work/nibsu.html">Explore National Independent Black Student Union <span aria-hidden="true">↗</span></a></p></div></li><li class="project" id="juneteenth" data-facet="community" data-facets="community leadership" style="--c:var(--community);--c-ink:var(--community-ink)">
+      <button class="project__row" aria-expanded="false" aria-controls="body-juneteenth"><span class="project__num">03</span><span class="project__title">Juneteenth Lake County<small>Volunteer &amp; vendor manager · 2024</small></span><span class="project__toggle" aria-hidden="true">+</span></button>
+      <div class="project__body" id="body-juneteenth" hidden><div class="plate"><span class="plate__cap">Lake County, Illinois</span><span class="plate__word">June<br>19</span><span class="plate__sub">Volunteer &amp; vendor manager · 2024</span></div><div><h3>The project</h3><p>Volunteer coordination and vendor support at the 2024 community festival.</p></div><div><h3>My contribution</h3><p>I directed volunteers where they were needed and helped keep event operations coordinated. As vendor manager, I helped vendors settle in, assisted them, and checked that they had what they needed.</p></div><p class="project__foot"><a class="glass cta" href="./work/juneteenth.html">Explore Juneteenth Lake County <span aria-hidden="true">↗</span></a></p></div></li><li class="project" id="avnt" data-facet="business" data-facets="business technology design" style="--c:var(--business);--c-ink:var(--business-ink)">
+      <button class="project__row" aria-expanded="false" aria-controls="body-avnt"><span class="project__num">04</span><span class="project__title">AVNT<small>Founder · Management, marketing & hiring</small></span><span class="project__toggle" aria-hidden="true">+</span></button>
+      <div class="project__body" id="body-avnt" hidden><div class="plate plate--logo"><img src="./assets/work/avnt-wordmark.svg" alt="" loading="lazy"><span class="plate__cap">AVNT</span><span class="plate__sub">Founder · Management, marketing & hiring</span></div><div><h3>The project</h3><p>A project management, marketing, and hiring agency supporting project teams, with tools built for its operations.</p></div><div><h3>My contribution</h3><p>I work with my leadership team on client management, ideas for attracting more players, and community activity. I also developed AVNT’s identity, website, operations dashboard, and bot tools.</p></div><p class="project__foot"><a class="glass cta" href="./work/avnt.html">Explore AVNT <span aria-hidden="true">↗</span></a></p></div></li><li class="project" id="playverse" data-facet="business" data-facets="business leadership community" style="--c:var(--business);--c-ink:var(--business-ink)">
+      <button class="project__row" aria-expanded="false" aria-controls="body-playverse"><span class="project__num">05</span><span class="project__title">Playverse / Super League Soccer<small>Project manager · AVNT client</small></span><span class="project__toggle" aria-hidden="true">+</span></button>
+      <div class="project__body" id="body-playverse" hidden><div class="plate plate--img"><img src="./assets/work/fifa-super-soccer-roblox.jpg" alt="" loading="lazy"><span class="plate__cap">Playverse / Super League Soccer</span><span class="plate__sub">Project manager · AVNT client</span></div><div><h3>The project</h3><p>Client work through AVNT: project management, brand, and social work with the Playverse team.</p></div><div><h3>My contribution</h3><p>My work includes project coordination, brand and social channels, and partnerships. I spend about twelve hours a week on this role.</p></div><p class="project__foot"><a class="glass cta" href="./work/playverse.html">Explore Playverse / Super League Soccer <span aria-hidden="true">↗</span></a></p></div></li><li class="project" id="claudekat" data-facet="technology" data-facets="technology design" style="--c:var(--technology);--c-ink:var(--technology-ink)">
+      <button class="project__row" aria-expanded="false" aria-controls="body-claudekat"><span class="project__num">06</span><span class="project__title">ClaudeKat / Royal Vault<small>App design and development</small></span><span class="project__toggle" aria-hidden="true">+</span></button>
+      <div class="project__body" id="body-claudekat" hidden><div class="plate plate--img"><img src="./assets/work/royal-vault-login.jpg" alt="" loading="lazy"><span class="plate__cap">ClaudeKat / Royal Vault</span><span class="plate__sub">App design and development</span></div><div><h3>The project</h3><p>A private app combining messaging, files, notes, and an iOS experience.</p></div><div><h3>My contribution</h3><p>My work spans the interface, server, real-time messaging, file handling, and the iOS wrapper.</p></div><p class="project__foot"><a class="glass cta" href="./work/claudekat.html">Explore ClaudeKat / Royal Vault <span aria-hidden="true">↗</span></a></p></div></li></ol><aside class="index__preview" aria-hidden="true"><div class="plate-stack"><div data-for="student-council" style="--c:var(--leadership);--c-ink:var(--leadership-ink)" class="plate plate--img"><img src="./assets/work/wths-home.jpg" alt="" loading="lazy"><span class="plate__cap">Student Council & Class of 2027</span><span class="plate__sub">Event leadership · Separate website project</span></div><div data-for="bsu" style="--c:var(--community);--c-ink:var(--community-ink)" class="plate"><span class="plate__cap">Lake County, Illinois</span><span class="plate__word">NIBSU</span><span class="plate__sub">President · Student community</span></div><div data-for="juneteenth" style="--c:var(--community);--c-ink:var(--community-ink)" class="plate"><span class="plate__cap">Lake County, Illinois</span><span class="plate__word">June<br>19</span><span class="plate__sub">Volunteer &amp; vendor manager · 2024</span></div><div data-for="avnt" style="--c:var(--business);--c-ink:var(--business-ink)" class="plate plate--logo"><img src="./assets/work/avnt-wordmark.svg" alt="" loading="lazy"><span class="plate__cap">AVNT</span><span class="plate__sub">Founder · Management, marketing & hiring</span></div><div data-for="playverse" style="--c:var(--business);--c-ink:var(--business-ink)" class="plate plate--img"><img src="./assets/work/fifa-super-soccer-roblox.jpg" alt="" loading="lazy"><span class="plate__cap">Playverse / Super League Soccer</span><span class="plate__sub">Project manager · AVNT client</span></div><div data-for="claudekat" style="--c:var(--technology);--c-ink:var(--technology-ink)" class="plate plate--img"><img src="./assets/work/royal-vault-login.jpg" alt="" loading="lazy"><span class="plate__cap">ClaudeKat / Royal Vault</span><span class="plate__sub">App design and development</span></div></div></aside></div>
+ <section class="supporting-work" aria-labelledby="supporting-title"><p class="eyebrow">Across the projects</p><h2 class="serif" id="supporting-title">Design and smaller experiments.</h2><div class="supporting-work__grid"><div><h3>School design</h3><p>My school projects give me a place to work on visual communication. I’m interested in making information clear and giving student activities an identity of their own.</p></div><div><h3>Tools I keep exploring</h3><p>Alongside these projects, I work on dashboards and community tools. They give me room to try ideas on a smaller scale and keep developing my technical skills.</p></div></div></section>
+ </main>
 
   <footer class="site-foot">
     <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>

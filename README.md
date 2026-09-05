@@ -1,71 +1,37 @@
 # Kaliph Howard — portfolio
 
-A personal college-admissions portfolio for Kaliph Howard (Chicago, Illinois, Class of 2027).
-Four real pages: Home, Work, About, Contact. Static HTML, CSS and JavaScript. No build step, no dependencies.
+A personal portfolio for Warren Township High School's Class of 2027, with a dedicated N.C. A&T introduction. Static HTML, CSS, and JavaScript; no frontend dependencies or compilation step.
 
-## Run locally
+## Local preview
 
-```bash
-npm run dev
-```
+Run `npm run dev`, then open the URL printed by the server. The default is `http://127.0.0.1:4173`. Set `PORT` to choose another port.
 
-Then open http://127.0.0.1:4173. (Any static server works; `npx serve .` or `python3 -m http.server` are fine too.)
+Run `npm run check` for JavaScript syntax checks and `npm run colleges` after changing the homepage or `data/colleges.json`.
 
-`npm run check` syntax-checks the JavaScript.
+## Pages
 
-## Structure
+- `index.html`: personal introduction and five interactive areas of interest.
+- `work.html`: six filterable projects, with roles visible before expanding.
+- `work/*.html`: individual studies of Student Council and the class website, NIBSU, Juneteenth Lake County, AVNT, Playverse, and Royal Vault.
+- `about.html`: personal interests, current learning, and college aspirations.
+- `contact.html`: public email and activities summary.
+- `for/ncat/index.html`: generated A&T introduction with links to relevant work.
+- `404.html`: recovery links for missing pages.
 
-```
-index.html            Home: name, place, year, introduction, the five facets, routes to About and Work
-work.html             Work: filterable project index with a sticky identity plate per project
-work/*.html           Case studies: student council + class site, Playverse, AVNT, ClaudeKat
-404.html              Not-found page (uses absolute paths; serve from the site root)
-about.html            About: portrait + facts, biography in short sections, facet map
-contact.html          Contact: email (placeholder), location, school
-css/site.css          The whole design system (tokens, glass material, nav, pages, motion, responsive)
-js/site.js            Progressive enhancement: pointer light, facet tabs, project index, filters
-assets/               Portrait placeholder, favicon, Open Graph image, and project images in assets/work/
-scripts/dev-server.mjs  Zero-dependency preview server
-data/colleges.json    One entry per college for the school-specific pages
-scripts/build-colleges.mjs  Generates for/<slug>/index.html from that list  (npm run colleges)
-scripts/activities-template.html  Source of the one-page activities PDF in assets/
-docs/DESIGN.md        Creative direction, research notes, content guide, what is still placeholder
-```
+## Content and assets
 
-## Editing content
+Copy lives in the HTML. The site uses existing project screenshots and AVNT artwork. The small `kh.` identity treatment is intentional; no stock or generated image is presented as Kaliph. A real portrait can be added when supplied.
 
-All copy lives in the HTML, next to `<!-- CONTENT: ... -->` comments.
-Anything wrapped in `<span class="tbd">` is a statement that needs Kaliph's confirmation and renders with a dashed underline until it is confirmed (remove the span to clear it).
-See `docs/DESIGN.md` for the full list of placeholders.
+College notes live in `data/colleges.json`. Each record has a slug, name, facet, note, optional heading, optional `firstChoice` boolean, and school colors. The generator validates all records before writing and preserves unrelated folders. Remove retired school pages explicitly after updating the data. `noindex` discourages search indexing; it provides no access control.
 
-## External resources
+The activities summary uses `data/activities.json`. After editing those descriptions, run `python3 scripts/build-activities.py` with ReportLab installed. This produces both `assets/kaliph-howard-activities.pdf` and `scripts/activities-template.html`. Check the one-page PDF after regenerating it.
 
-Two typefaces are loaded from Google Fonts: **Fraunces** (display serif) and **Instrument Sans** (text).
-Both have system fallbacks, so the site is readable offline. No other third-party code.
+The public email is `adventacious@gmail.com`, supplied by Kaliph on September 4, 2026. Current academic copy follows his latest course list: Language and Composition is not labeled AP, and ASU coursework is in progress.
 
-## Adding real photographs and screenshots
+## Design and behavior
 
-- Portrait: replace `assets/portrait-placeholder.svg` with a photograph cropped to 4:5, then update the `alt` text and `<figcaption>` in `index.html` and `about.html`.
-- Project images: each project on the Work page has a `.plate`. Swap the typographic plate for an `<img>` when real screenshots exist. Do not add mockups of screens that do not exist.
-
-## School-specific links
-
-`data/colleges.json` holds one entry per college: `slug`, `name`, `facet` (which of the five facets the page opens on), `note` (two or three sentences addressed to that school) and an optional `color` (the school's hex colour; it tints the note card only, and the label text colour is chosen for contrast automatically) and an optional `color2` (a second school colour; the card's top rule and background wash become a gradient between the two). No logos: they are trademarks and imply an affiliation. Run:
-
-```bash
-npm run colleges
-```
-
-This regenerates `for/<slug>/index.html` for every entry: the normal home page with the note at the top, opening on that facet, marked `noindex`. Share `https://<domain>/for/<slug>/`. Delete the `example` entry before sending real links, and never hand-edit the generated files.
-
-## Activities PDF
-
-`assets/kaliph-howard-activities.pdf` is rendered from `scripts/activities-template.html`. Edit the template, then regenerate with headless Chrome or any print-to-PDF; keep it to one Letter page.
-
-## Sharing metadata
-
-Every page carries Open Graph tags. `og:image` points at `assets/og.png` with a relative path; once the site has a domain, change it to the absolute URL on each page.
+Cool white, navy, cobalt, and lime accents frame Instrument Sans and italic Fraunces typography. The homepage pairs an oversized name with numbered interests. The school-specific page puts its personal letter below the introduction. Phone navigation floats at the bottom. Tabs support arrow keys, Home, and End; work filters update a live project count. Hash links open a project or category. Project screenshots expand in an accessible native dialog and return focus when closed. Content remains readable without JavaScript, and reduced-motion and print styles are included.
 
 ## Publishing
 
-Nothing is deployed. GitHub Pages is not enabled and no domain is configured. That is a separate decision.
+This revision is for local review. No deployment, domain configuration, or remote push is included. Preserve that boundary until Kaliph explicitly requests publication. Existing social preview artwork is retained; absolute social URLs can be set once a final domain is known.

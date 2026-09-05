@@ -73,7 +73,6 @@
 
     tabs.forEach((tab, i) => {
       tab.addEventListener("click", () => select(i));
-      tab.addEventListener("pointerenter", () => { if (finePointer.matches) select(i); });
       tab.addEventListener("keydown", (e) => {
         const n = tabs.length;
         if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); select((i + 1) % n, { focus: true }); }
@@ -120,7 +119,7 @@
       row.addEventListener("focusin", () => showPlate(row.id));
     });
 
-    function applyFilter(name) {
+    function applyFilter(name, { updateURL = true } = {}) {
       filters.forEach((f) => f.setAttribute("aria-pressed", String(f.dataset.filter === name)));
       let firstVisible = null;
       rows.forEach((row) => {
@@ -129,24 +128,36 @@
         if (show && !firstVisible) firstVisible = row;
       });
       if (firstVisible) showPlate(firstVisible.id);
+      const count = rows.filter((row) => !row.hidden).length;
+      const status = document.querySelector("[data-work-count]");
+      if (status) status.textContent = `${count} ${count === 1 ? "project" : "projects"}`;
       const facet = name === "all" ? "leadership" : name;
       doc.dataset.facet = facet;
-      if (name !== "all") history.replaceState(null, "", `#${name}`);
-      else history.replaceState(null, "", location.pathname);
+      if (updateURL) {
+        const url = new URL(location.href);
+        url.hash = name === "all" ? "" : name;
+        history.replaceState(null, "", url);
+      }
     }
     filters.forEach((f) => f.addEventListener("click", () => applyFilter(f.dataset.filter)));
 
-    const hash = location.hash.replace("#", "");
-    if (hash) {
-      if (filters.some((f) => f.dataset.filter === hash)) applyFilter(hash);
-      else {
+    function restoreFromURL() {
+      const hash = location.hash.slice(1);
+      if (filters.some((f) => f.dataset.filter === hash)) {
+        applyFilter(hash, { updateURL: false });
+      } else {
+        applyFilter("all", { updateURL: false });
         const target = rows.find((r) => r.id === hash);
         if (target) {
-          target.querySelector(".project__row").click();
+          target.querySelector(".project__row").setAttribute("aria-expanded", "true");
+          target.querySelector(".project__body").hidden = false;
+          showPlate(target.id);
           target.scrollIntoView({ block: "start" });
         }
       }
-    } else if (rows[0]) showPlate(rows[0].id);
+    }
+    restoreFromURL();
+    window.addEventListener("hashchange", restoreFromURL);
   }
 
   /* ---------- About: facet map colours the scene on hover/focus ---------- */
@@ -155,4 +166,37 @@
     li.addEventListener("pointerenter", set);
     li.addEventListener("focusin", set);
   });
+
+  /* Actual project screenshots: native dialog keeps focus and Escape behavior accessible. */
+  const artifactDialog = document.querySelector(".artifact-dialog");
+  if (artifactDialog && typeof artifactDialog.showModal === "function") {
+    let opener = null;
+    let previousOverflow = "";
+    document.querySelectorAll("a[data-lightbox]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        // Modified clicks retain normal link behavior.
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        opener = link;
+        const image = link.querySelector("img");
+        const expanded = artifactDialog.querySelector("[data-artifact-image]");
+        expanded.src = link.href;
+        expanded.alt = image.alt;
+        artifactDialog.querySelector("[data-artifact-caption]").textContent = image.alt;
+        previousOverflow = document.documentElement.style.overflow;
+        document.documentElement.style.overflow = "hidden";
+        artifactDialog.showModal();
+      });
+    });
+    artifactDialog.addEventListener("click", (event) => {
+      if (event.target === artifactDialog) {
+        const rect = artifactDialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) artifactDialog.close();
+      }
+    });
+    artifactDialog.addEventListener("close", () => {
+      document.documentElement.style.overflow = previousOverflow;
+      if (opener) opener.focus({ preventScroll: true });
+    });
+  }
 })();
