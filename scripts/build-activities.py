@@ -21,7 +21,7 @@ line = colors.HexColor('#d6d1c8')
 styles = {
     'name': ParagraphStyle('name', fontName='Times-Roman', fontSize=29, leading=31, textColor=ink),
     'label': ParagraphStyle('label', fontName='Helvetica', fontSize=8, leading=12, textColor=muted),
-    'body': ParagraphStyle('body', fontName='Helvetica', fontSize=9.4, leading=13, textColor=ink),
+    'body': ParagraphStyle('body', fontName='Helvetica', fontSize=9.2, leading=12.4, textColor=ink),
     'role': ParagraphStyle('role', fontName='Helvetica', fontSize=8.4, leading=11, textColor=muted),
     'title': ParagraphStyle('title', fontName='Helvetica-Bold', fontSize=10, leading=13, textColor=ink),
     'section': ParagraphStyle('section', fontName='Helvetica-Bold', fontSize=8.4, leading=12, textColor=accent, spaceBefore=12, spaceAfter=6),
@@ -33,14 +33,14 @@ credentials = 'Microsoft Office Specialist certifications in Excel, Word, and Po
 story = [p('Kaliph Howard', 'name'), Spacer(1,5),
     p('ACTIVITIES SUMMARY  /  WARREN TOWNSHIP HIGH SCHOOL  /  CLASS OF 2027', 'label'),
     p('<link href="mailto:adventacious@gmail.com">adventacious@gmail.com</link>  |  Chicago, Illinois', 'label'),
-    Spacer(1,13), p(intro), p('SELECTED RESPONSIBILITIES AND PROJECTS', 'section')]
+    Spacer(1,10), p(intro), p('SELECTED RESPONSIBILITIES AND PROJECTS', 'section')]
 for a in activities:
     heading = [p(escape(a['title']), 'title'), p(escape(a['role']).replace('·',' / '), 'role')]
     t = Table([[heading, p(escape(a['description']))]], colWidths=[164, 340], hAlign='LEFT')
     t.setStyle(TableStyle([
         ('VALIGN',(0,0),(-1,-1),'TOP'), ('LEFTPADDING',(0,0),(-1,-1),0),
         ('RIGHTPADDING',(0,0),(0,0),14), ('RIGHTPADDING',(1,0),(1,0),0),
-        ('TOPPADDING',(0,0),(-1,-1),9), ('BOTTOMPADDING',(0,0),(-1,-1),10),
+        ('TOPPADDING',(0,0),(-1,-1),6), ('BOTTOMPADDING',(0,0),(-1,-1),7),
         ('LINEABOVE',(0,0),(-1,0),.45,line),
     ]))
     story.append(KeepTogether([t]))

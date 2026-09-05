@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>AVNT — Kaliph Howard</title>
   <meta name="description" content="AVNT: the project management, marketing, and hiring agency I founded, and the tools I build for its operations.">
-  <meta name="theme-color" content="#f5f7fc">
+  <meta name="theme-color" content="#d9d3c8">
   <meta property="og:type" content="article">
   <meta property="og:title" content="AVNT — Kaliph Howard">
   <meta property="og:description" content="AVNT: the project management, marketing, and hiring agency I founded, and the tools I build for its operations.">
@@ -14,48 +14,106 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/site.css">
   <script>document.documentElement.classList.replace('no-js','js')</script>
   <script src="../js/site.js" defer></script>
-</head>
-<body data-page="work">
+</head><body data-page="work">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
 
+  <!-- Shared header: identical on every page except aria-current -->
   <header class="site-head">
-    <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">kh.</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
-    <nav class="glass nav" aria-label="Primary">
+    <a class="brand" href="../index.html" aria-label="Kaliph Howard, home"><span class="brand__mark" aria-hidden="true">kh</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
+    <nav class="nav" aria-label="Primary">
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../work.html" aria-current="page"><span class="nav__pill" aria-hidden="true"></span>Work</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html"><span data-text="Home">Home</span></a></li>
+        <li><a href="../work.html" aria-current="page"><span data-text="Work">Work</span></a></li>
+        <li><a href="../about.html"><span data-text="About">About</span></a></li>
+        <li><a href="../contact.html"><span data-text="Contact">Contact</span></a></li>
       </ul>
     </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu <b aria-hidden="true"></b></button>
   </header>
-
-  <main id="main" class="page case"><header class="case__head">
-    <p class="eyebrow eyebrow--accent"><a href="../work.html">Work</a> / AVNT</p>
-    <h1 class="display">Building an agency around people and projects.</h1><p class="lede">I founded AVNT, a project management, marketing, and hiring agency. It works with Roblox project teams, bringing together coordination, staffing, community operations, and supporting technology.</p></header>
-    <dl class="case__meta"><div><dt>Role</dt><dd>Founder · Agency and operations tools</dd></div><div><dt>Services</dt><dd>Project management · Marketing · Hiring</dd></div><div><dt>Tools</dt><dd>Next.js, TypeScript, PostgreSQL, Python</dd></div><div><dt>Visit</dt><dd><a href="https://avntbrand.com/" rel="noopener">avntbrand.com</a></dd></div></dl><figure class="case__hero"><img src="../assets/work/avnt-wordmark.svg" alt="The AVNT wordmark." width="1200" height="300"><figcaption>AVNT · Brand identity</figcaption></figure><div class="case__body"><section aria-labelledby="s0"><h2 id="s0">What AVNT does</h2><div class="prose"><p>AVNT is a service business for project owners and teams. Its work includes organizing delivery, supporting marketing, and finding people for the roles a project needs.</p><p>The agency’s public site describes work with Roblox teams across project management, testing, community operations, staffing, websites, and launch support. The scope depends on what each team needs. <a href="https://avntbrand.com/#services" rel="noopener">Explore AVNT’s services</a>.</p></div></section>
-<section aria-labelledby="agency-services"><h2 id="agency-services">The core services</h2><dl class="detail-list"><div><dt>Project management</dt><dd>Turning a project’s goals into priorities, responsibilities, and schedules, then coordinating the work through delivery.</dd></div><div><dt>Marketing</dt><dd>Marketing is one of AVNT’s core areas, alongside communications and community work around a project’s launch and ongoing activity.</dd></div><div><dt>Hiring and staffing</dt><dd>Matching people to project needs across management, testing, community work, and development, with direction and support around the placement.</dd></div><div><dt>Supporting operations</dt><dd>Quality assurance, community support, and websites or internal tools help teams prepare for release and keep operating afterward.</dd></div></dl></section>
-<section aria-labelledby="s1"><h2 id="s1">My work as founder</h2><div class="prose"><p>A typical week at AVNT involves working with my leadership team to manage our clients and their projects. We discuss what we can do to bring more players into the games we support and get more people participating in their communities.</p><p>That work connects the management and marketing sides of AVNT: keeping client projects moving while thinking about the people those projects are trying to reach.</p><p>Alongside that agency work, I develop the website and internal tools that support its operations.</p></div></section>
-
-<section aria-labelledby="agency-projects"><h2 id="agency-projects">Examples from the agency</h2><div><dl class="detail-list"><div><dt>Playverse</dt><dd>Playverse is an AVNT client. <a href="playverse.html">My Playverse case study</a> describes my project-management, brand, and social work with its team.</dd></div><div><dt>Ropilot</dt><dd>AVNT’s portfolio lists product management for this Roblox coding and playtesting platform, plus community management for its associated Discord. AVNT does not own Ropilot.</dd></div><div><dt>Profile Studio</dt><dd>The public portfolio identifies Profile Studio as a live product owned and operated by AVNT.</dd></div></dl><p class="evidence-note">Ropilot and Profile Studio are agency-level examples from <a href="https://avntbrand.com/portfolio" rel="noopener">AVNT’s public portfolio</a>, reviewed September 4, 2026.</p></div></section>
-<section aria-labelledby="s2"><h2 id="s2">Identity and tools</h2><div class="prose"><p>I created AVNT’s monogram and wordmark. I also work on its website and internal tools, connecting the brand’s public presentation with the software behind its operation.</p></div></section>
-<section aria-labelledby="operations"><h2 id="operations">Inside the operations tools</h2><dl class="detail-list"><div><dt>Task and question board</dt><dd>Tasks move through Open, In progress, and Done. Questions can be marked answered, so unfinished work and unresolved questions have a visible place.</dd></div><div><dt>Contacts and skills</dt><dd>A directory organizes developer contacts with skill tags and supporting information. It gives the team a way to find people by what they do.</dd></div><div><dt>Activity records</dt><dd>Completing a task creates an activity-log entry. The log preserves a record of completed work and can be reviewed as a weekly digest.</dd></div><div><dt>Connected community tools</dt><dd>The dashboard and supporting Discord bot exchange selected tasks and information through an API. They are connected parts of the operation.</dd></div></dl></section><section aria-labelledby="workflow"><h2 id="workflow">One small workflow</h2><div><ol class="workflow" aria-label="Task workflow in the AVNT app"><li><span>01</span><strong>Open</strong><p>A task has a place on the board.</p></li><li><span>02</span><strong>In progress</strong><p>Its status shows that work is underway.</p></li><li><span>03</span><strong>Done + recorded</strong><p>Completion creates an activity-log entry.</p></li></ol><p class="evidence-note">A simplified view of the existing task workflow, not a screenshot.</p></div></section><section aria-labelledby="business-question"><h2 id="business-question">The business question</h2><div class="prose"><p>AVNT brings several of my interests into one business: organizing projects, marketing, hiring, and building useful systems. It is one reason I want to study business and management. I want to better understand the decisions behind a service business, from the work it takes on to the people and resources it needs.</p></div></section></div>
-    <nav class="case__nav" aria-label="More work"><a class="glass cta" href="playverse.html">Next: Playverse / Super League Soccer <span aria-hidden="true">↗</span></a><a class="glass cta" href="../work.html">All work <span aria-hidden="true">↗</span></a></nav></main>
-
-  <footer class="site-foot">
-    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
+  <div class="menu" id="menu">
     <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../work.html">Work</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../index.html"><small>01</small>Home</a></li>
+      <li><a href="../work.html"><small>02</small>Work</a></li>
+      <li><a href="../about.html"><small>03</small>About</a></li>
+      <li><a href="../contact.html"><small>04</small>Contact</a></li>
     </ul>
-    <span>© <span data-year>2026</span> Kaliph Howard</span>
+    <div class="menu__foot"><span>adventacious@gmail.com</span><span>Chicago, Illinois · Class of 2027</span></div>
+  </div>
+
+  <main id="main" class="page">
+    <div class="wrap">
+      <header class="case__hero">
+        <p class="crumb" data-reveal="fade"><a href="../work.html">Work</a><span aria-hidden="true">/</span><span>AVNT</span></p>
+        <h1 class="display case__title" data-split>Building an agency around people and projects.</h1>
+        <p class="lede" data-reveal style="--i:2">I founded AVNT, a project management, marketing, and hiring agency. It works with Roblox project teams, bringing together coordination, staffing, community operations, and supporting technology.</p>
+      </header>
+      <dl class="meta" data-stagger><div><dt>Role</dt><dd>Founder · Agency and operations tools</dd></div><div><dt>Founded</dt><dd>Early 2024</dd></div><div><dt>Services</dt><dd>Project management · Marketing · Hiring</dd></div><div><dt>Tools</dt><dd>Next.js, TypeScript, PostgreSQL, Python</dd></div><div><dt>Visit</dt><dd><a href="https://avntbrand.com/" rel="noopener">avntbrand.com</a></dd></div></dl>
+      <div class="cover" data-reveal>
+        <div class="plate plate--logo"><img src="../assets/work/avnt-wordmark.svg" alt="The AVNT wordmark." width="1200" height="300"></div><figure><figcaption>AVNT · Brand identity</figcaption></figure>
+      </div>
+      <div class="case__body">
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b01">
+        <h2 class="block__title" id="b01" data-n="01" data-reveal>What AVNT does</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>AVNT is a service business for project owners and teams. Its work includes organizing delivery, supporting marketing, and finding people for the roles a project needs.</p><p>The agency’s public site describes work with Roblox teams across project management, testing, community operations, staffing, websites, and launch support. The scope depends on what each team needs. <a href="https://avntbrand.com/#services" rel="noopener">Explore AVNT’s services</a>.</p></div></div>
+      </section>
+      </div>
+      <section class="block" aria-labelledby="b02">
+        <h2 class="block__title" id="b02" data-n="02" data-reveal>The core services</h2>
+        <div class="block__content" data-reveal style="--i:1"><dl class="detail"><div><dt>Project management</dt><dd>Turning a project’s goals into priorities, responsibilities, and schedules, then coordinating the work through delivery.</dd></div><div><dt>Marketing</dt><dd>Marketing is one of AVNT’s core areas, alongside communications and community work around a project’s launch and ongoing activity.</dd></div><div><dt>Hiring and staffing</dt><dd>Matching people to project needs across management, testing, community work, and development, with direction and support around the placement.</dd></div><div><dt>Supporting operations</dt><dd>Quality assurance, community support, and websites or internal tools help teams prepare for release and keep operating afterward.</dd></div></dl></div>
+      </section>
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b03">
+        <h2 class="block__title" id="b03" data-n="03" data-reveal>My work as founder</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>A typical week at AVNT involves working with my leadership team to manage our clients and their projects. We discuss what we can do to bring more players into the games we support and get more people participating in their communities.</p><p>That work connects the management and marketing sides of AVNT: keeping client projects moving while thinking about the people those projects are trying to reach.</p><p>Alongside that agency work, I develop the website and internal tools that support its operations.</p></div></div>
+      </section>
+      </div>
+      <section class="block" aria-labelledby="b04">
+        <h2 class="block__title" id="b04" data-n="04" data-reveal>Examples from the agency</h2>
+        <div class="block__content" data-reveal style="--i:1"><dl class="detail"><div><dt>Playverse</dt><dd>Playverse is an AVNT client. <a href="playverse.html">My Playverse case study</a> describes my project-management, brand, and social work with its team.</dd></div><div><dt>Ropilot</dt><dd>AVNT’s portfolio lists product management for this Roblox coding and playtesting platform, plus community management for its associated Discord. AVNT does not own Ropilot.</dd></div><div><dt>Profile Studio</dt><dd>The public portfolio identifies Profile Studio as a live product owned and operated by AVNT.</dd></div></dl><p class="note">Ropilot and Profile Studio are agency-level examples from <a href="https://avntbrand.com/portfolio" rel="noopener">AVNT’s public portfolio</a>, reviewed September 4, 2026.</p></div>
+      </section>
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b05">
+        <h2 class="block__title" id="b05" data-n="05" data-reveal>Identity and tools</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>I created AVNT’s monogram and wordmark. I also work on its website and internal tools, connecting the brand’s public presentation with the software behind its operation.</p></div></div>
+      </section>
+      </div>
+      <section class="block" aria-labelledby="b06">
+        <h2 class="block__title" id="b06" data-n="06" data-reveal>Inside the operations tools</h2>
+        <div class="block__content" data-reveal style="--i:1"><dl class="detail"><div><dt>Task and question board</dt><dd>Tasks move through Open, In progress, and Done. Questions can be marked answered, so unfinished work and unresolved questions have a visible place.</dd></div><div><dt>Contacts and skills</dt><dd>A directory organizes developer contacts with skill tags and supporting information. It gives the team a way to find people by what they do.</dd></div><div><dt>Activity records</dt><dd>Completing a task creates an activity-log entry. The log preserves a record of completed work and can be reviewed as a weekly digest.</dd></div><div><dt>Connected community tools</dt><dd>The dashboard and supporting Discord bot exchange selected tasks and information through an API. They are connected parts of the operation.</dd></div></dl></div>
+      </section>
+      <section class="block" aria-labelledby="b07">
+        <h2 class="block__title" id="b07" data-n="07" data-reveal>One small workflow</h2>
+        <div class="block__content" data-reveal style="--i:1"><ol class="steps" aria-label="Task workflow in the AVNT app"><li><span>01</span><strong>Open</strong><p>A task has a place on the board.</p></li><li><span>02</span><strong>In progress</strong><p>Its status shows that work is underway.</p></li><li><span>03</span><strong>Done + recorded</strong><p>Completion creates an activity-log entry.</p></li></ol><p class="note">A simplified view of the existing task workflow, not a screenshot.</p></div>
+      </section>
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b08">
+        <h2 class="block__title" id="b08" data-n="08" data-reveal>The business question</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>AVNT brings several of my interests into one business: organizing projects, marketing, hiring, and building useful systems. It is one reason I want to study business and management. I want to better understand the decisions behind a service business, from the work it takes on to the people and resources it needs.</p></div></div>
+      </section>
+      </div>
+      </div>
+      <nav class="next" aria-label="Next project"><a href="./playverse.html"><span><small>Next project</small><strong>Playverse</strong></span><b aria-hidden="true">↗</b></a></nav>
+    </div>
+  </main>
+
+  <footer class="site-foot dark">
+
+    <div class="wrap site-foot__bar">
+      <span>Kaliph Howard · Chicago, Illinois · Class of 2027</span>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="https://github.com/adventau/colleges" rel="noopener">Source</a></li>
+      </ul>
+      <span>© <span data-year>2026</span> Kaliph Howard</span>
+    </div>
   </footer>
 </body>
 </html>

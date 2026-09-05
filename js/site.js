@@ -1,202 +1,126 @@
 /* Kaliph Howard — portfolio behaviour.
-   Everything here is progressive enhancement: the pages read fine without it. */
+   Progressive enhancement only: every page reads fine with this file missing. */
 (() => {
   "use strict";
   const doc = document.documentElement;
+  const body = document.body;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
   /* ---------- Year ---------- */
-  document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = String(new Date().getFullYear())));
+  $$("[data-year]").forEach((el) => (el.textContent = String(new Date().getFullYear())));
 
-  /* ---------- Entrance ----------
-     Added synchronously: a throttled rAF (background tab) must never leave content invisible. */
-  document.body.classList.add("is-ready");
-
-  /* ---------- Pointer light: scene parallax + glass specular ----------
-     One rAF loop, values lerped so the light feels like it has weight. */
-  const glass = Array.from(document.querySelectorAll(".glass"));
-  let targetX = 0, targetY = 0, curX = 0, curY = 0, pointerX = -1, pointerY = -1, raf = 0;
-
-  function tick() {
-    raf = 0;
-    curX += (targetX - curX) * 0.08;
-    curY += (targetY - curY) * 0.08;
-    doc.style.setProperty("--px", curX.toFixed(4));
-    doc.style.setProperty("--py", curY.toFixed(4));
-    if (pointerX >= 0) {
-      for (const el of glass) {
-        const r = el.getBoundingClientRect();
-        if (r.width === 0) continue;
-        el.style.setProperty("--lx", `${pointerX - r.left}px`);
-        el.style.setProperty("--ly", `${pointerY - r.top}px`);
-      }
-    }
-    if (Math.abs(targetX - curX) > 0.001 || Math.abs(targetY - curY) > 0.001) raf = requestAnimationFrame(tick);
-  }
-  function schedule() { if (!raf) raf = requestAnimationFrame(tick); }
-
-  if (finePointer.matches && !reduceMotion.matches) {
-    window.addEventListener("pointermove", (e) => {
-      pointerX = e.clientX; pointerY = e.clientY;
-      targetX = (e.clientX / window.innerWidth) * 2 - 1;
-      targetY = (e.clientY / window.innerHeight) * 2 - 1;
-      schedule();
-    }, { passive: true });
-    window.addEventListener("scroll", schedule, { passive: true });
-  } else if (!reduceMotion.matches && window.DeviceOrientationEvent && "ontouchstart" in window) {
-    // Touch devices: a whisper of tilt parallax, if the browser allows it without a permission prompt.
-    window.addEventListener("deviceorientation", (e) => {
-      if (e.gamma == null || e.beta == null) return;
-      targetX = Math.max(-1, Math.min(1, e.gamma / 30));
-      targetY = Math.max(-1, Math.min(1, (e.beta - 40) / 30));
-      schedule();
-    }, { passive: true });
-  }
-
-  /* ---------- Home: facet tabs ---------- */
-  const tablist = document.querySelector('.facets__tabs[role="tablist"]');
-  if (tablist) {
-    const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
-    const panels = tabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
-    let current = tabs.findIndex((t) => t.getAttribute("aria-selected") === "true");
-
-    function select(i, { focus = false } = {}) {
-      if (i === current) { if (focus) tabs[i].focus(); return; }
-      tabs.forEach((t, k) => { t.setAttribute("aria-selected", String(k === i)); t.tabIndex = k === i ? 0 : -1; });
-      panels.forEach((p, k) => { p.hidden = k !== i; });
-      doc.dataset.facet = tabs[i].dataset.facet;
-      current = i;
-      if (focus) tabs[i].focus();
-      try { sessionStorage.setItem("facet", tabs[i].dataset.facet); } catch (_) {}
-    }
-
-    tabs.forEach((tab, i) => {
-      tab.addEventListener("click", () => select(i));
-      tab.addEventListener("keydown", (e) => {
-        const n = tabs.length;
-        if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); select((i + 1) % n, { focus: true }); }
-        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); select((i - 1 + n) % n, { focus: true }); }
-        else if (e.key === "Home") { e.preventDefault(); select(0, { focus: true }); }
-        else if (e.key === "End") { e.preventDefault(); select(n - 1, { focus: true }); }
+  /* ---------- Split headline text into masked words ---------- */
+  $$("[data-split]").forEach((el) => {
+    const walk = (node) => {
+      Array.from(node.childNodes).forEach((child) => {
+        if (child.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          child.textContent.split(/(\s+)/).forEach((part) => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(" ")); return; }
+            const w = document.createElement("span"); w.className = "w";
+            const inner = document.createElement("span"); inner.textContent = part;
+            w.appendChild(inner); frag.appendChild(w);
+          });
+          child.replaceWith(frag);
+        } else if (child.nodeType === 1 && child.tagName !== "BR") walk(child);
       });
-    });
-
-    // Return visitors land on the facet they last chose, unless this is a
-    // school-specific page, which always opens on the facet chosen for that school.
-    if (!doc.dataset.for) {
-      try {
-        const saved = sessionStorage.getItem("facet");
-        const k = tabs.findIndex((t) => t.dataset.facet === saved);
-        if (k >= 0) select(k);
-      } catch (_) {}
-    }
-  }
-
-  /* ---------- Work: index rows, sticky preview, filters ---------- */
-  const index = document.querySelector(".index");
-  if (index) {
-    const rows = Array.from(index.querySelectorAll(".project"));
-    const plates = Array.from(document.querySelectorAll(".index__preview .plate"));
-    const filters = Array.from(document.querySelectorAll(".filter"));
-
-    function showPlate(id) {
-      plates.forEach((p) => p.classList.toggle("is-active", p.dataset.for === id));
-      const row = rows.find((r) => r.id === id);
-      if (row && row.dataset.facet) doc.dataset.facet = row.dataset.facet;
-    }
-
-    rows.forEach((row) => {
-      const btn = row.querySelector(".project__row");
-      const body = row.querySelector(".project__body");
-      btn.addEventListener("click", () => {
-        const open = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", String(!open));
-        body.hidden = open;
-        if (!open) showPlate(row.id);
-      });
-      row.addEventListener("pointerenter", () => showPlate(row.id));
-      row.addEventListener("focusin", () => showPlate(row.id));
-    });
-
-    function applyFilter(name, { updateURL = true } = {}) {
-      filters.forEach((f) => f.setAttribute("aria-pressed", String(f.dataset.filter === name)));
-      let firstVisible = null;
-      rows.forEach((row) => {
-        const show = name === "all" || row.dataset.facets.split(" ").includes(name);
-        row.hidden = !show;
-        if (show && !firstVisible) firstVisible = row;
-      });
-      if (firstVisible) showPlate(firstVisible.id);
-      const count = rows.filter((row) => !row.hidden).length;
-      const status = document.querySelector("[data-work-count]");
-      if (status) status.textContent = `${count} ${count === 1 ? "project" : "projects"}`;
-      const facet = name === "all" ? "leadership" : name;
-      doc.dataset.facet = facet;
-      if (updateURL) {
-        const url = new URL(location.href);
-        url.hash = name === "all" ? "" : name;
-        history.replaceState(null, "", url);
-      }
-    }
-    filters.forEach((f) => f.addEventListener("click", () => applyFilter(f.dataset.filter)));
-
-    function restoreFromURL() {
-      const hash = location.hash.slice(1);
-      if (filters.some((f) => f.dataset.filter === hash)) {
-        applyFilter(hash, { updateURL: false });
-      } else {
-        applyFilter("all", { updateURL: false });
-        const target = rows.find((r) => r.id === hash);
-        if (target) {
-          target.querySelector(".project__row").setAttribute("aria-expanded", "true");
-          target.querySelector(".project__body").hidden = false;
-          showPlate(target.id);
-          target.scrollIntoView({ block: "start" });
-        }
-      }
-    }
-    restoreFromURL();
-    window.addEventListener("hashchange", restoreFromURL);
-  }
-
-  /* ---------- About: facet map colours the scene on hover/focus ---------- */
-  document.querySelectorAll(".map li[data-facet]").forEach((li) => {
-    const set = () => (doc.dataset.facet = li.dataset.facet);
-    li.addEventListener("pointerenter", set);
-    li.addEventListener("focusin", set);
+    };
+    walk(el);
+    $$(".w > span", el).forEach((sp, j) => sp.style.setProperty("--j", j));
   });
 
-  /* Actual project screenshots: native dialog keeps focus and Escape behavior accessible. */
-  const artifactDialog = document.querySelector(".artifact-dialog");
-  if (artifactDialog && typeof artifactDialog.showModal === "function") {
-    let opener = null;
-    let previousOverflow = "";
-    document.querySelectorAll("a[data-lightbox]").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        // Modified clicks retain normal link behavior.
-        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        opener = link;
-        const image = link.querySelector("img");
-        const expanded = artifactDialog.querySelector("[data-artifact-image]");
-        expanded.src = link.href;
-        expanded.alt = image.alt;
-        artifactDialog.querySelector("[data-artifact-caption]").textContent = image.alt;
-        previousOverflow = document.documentElement.style.overflow;
-        document.documentElement.style.overflow = "hidden";
-        artifactDialog.showModal();
+  /* ---------- Reveal on scroll ---------- */
+  const revealables = $$("[data-reveal], [data-split], [data-stagger]");
+  if ("IntersectionObserver" in window && !reduceMotion.matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.05 });
+    revealables.forEach((el) => io.observe(el));
+    // Belt and braces: anything near the viewport shows even if the observer is throttled.
+    const sweep = () => revealables.forEach((el) => { if (el.classList.contains("in")) return; const r = el.getBoundingClientRect(); if (r.top < window.innerHeight * 1.05 && r.bottom > 0) { el.classList.add("in"); io.unobserve(el); } });
+    setTimeout(sweep, 0); setTimeout(sweep, 400);
+    window.addEventListener("scroll", sweep, { passive: true });
+    document.addEventListener("visibilitychange", sweep);
+  } else revealables.forEach((el) => el.classList.add("in"));
+
+  /* ---------- Header rule once scrolled ---------- */
+  const head = $(".site-head");
+  if (head) {
+    const onScroll = () => head.classList.toggle("is-scrolled", window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- Menu (phones) ---------- */
+  const menuBtn = $(".menu-btn"), menu = $(".menu");
+  if (menuBtn && menu) {
+    const setOpen = (open) => {
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menu.classList.toggle("is-open", open);
+      body.style.overflow = open ? "hidden" : "";
+      if (open) $("a", menu).focus({ preventScroll: true });
+    };
+    menuBtn.addEventListener("click", () => setOpen(menuBtn.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.classList.contains("is-open")) { setOpen(false); menuBtn.focus(); } });
+    $$("a", menu).forEach((a) => a.addEventListener("click", () => setOpen(false)));
+  }
+
+  /* ---------- Facets: tabs ---------- */
+  const tabs = $$(".facet-tab");
+  if (tabs.length) {
+    const panels = $$(".facet-panel");
+    const select = (tab, focus = false) => {
+      tabs.forEach((t) => { const on = t === tab; t.setAttribute("aria-selected", String(on)); t.tabIndex = on ? 0 : -1; });
+      panels.forEach((p) => { const on = p.id === tab.getAttribute("aria-controls"); p.hidden = !on; if (on) { p.style.animation = "none"; void p.offsetWidth; p.style.animation = ""; } });
+      doc.dataset.facet = tab.dataset.facet;
+      if (focus) tab.focus();
+    };
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => select(tab));
+      if (finePointer.matches) tab.addEventListener("pointerenter", () => select(tab));
+      tab.addEventListener("keydown", (e) => {
+        const i = tabs.indexOf(tab);
+        const map = { ArrowDown: i + 1, ArrowRight: i + 1, ArrowUp: i - 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+        if (!(e.key in map)) return;
+        e.preventDefault();
+        select(tabs[(map[e.key] + tabs.length) % tabs.length], true);
       });
     });
-    artifactDialog.addEventListener("click", (event) => {
-      if (event.target === artifactDialog) {
-        const rect = artifactDialog.getBoundingClientRect();
-        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) artifactDialog.close();
-      }
-    });
-    artifactDialog.addEventListener("close", () => {
-      document.documentElement.style.overflow = previousOverflow;
-      if (opener) opener.focus({ preventScroll: true });
-    });
   }
+
+  /* ---------- Lightbox ---------- */
+  const zooms = $$("[data-lightbox]");
+  if (zooms.length && "HTMLDialogElement" in window) {
+    const dialog = document.createElement("dialog");
+    dialog.className = "lightbox"; dialog.setAttribute("aria-label", "Enlarged screenshot");
+    dialog.innerHTML = '<button class="lightbox__close" type="button">Close ✕</button><img alt=""><p></p>';
+    body.appendChild(dialog);
+    const img = $("img", dialog), cap = $("p", dialog);
+    let opener = null;
+    zooms.forEach((a) => a.addEventListener("click", (e) => {
+      e.preventDefault(); opener = a;
+      const inner = $("img", a);
+      img.src = a.getAttribute("href"); img.alt = inner ? inner.alt : "";
+      cap.textContent = a.closest("figure")?.querySelector("figcaption")?.textContent || "";
+      dialog.showModal();
+    }));
+    $(".lightbox__close", dialog).addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+    dialog.addEventListener("close", () => { img.removeAttribute("src"); opener?.focus(); });
+  }
+
+  /* ---------- Copy email ---------- */
+  $$("[data-copy]").forEach((btn) => btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      const was = btn.textContent; btn.textContent = "Copied"; btn.classList.add("is-done");
+      setTimeout(() => { btn.textContent = was; btn.classList.remove("is-done"); }, 1800);
+    } catch { location.href = `mailto:${btn.dataset.copy}`; }
+  }));
+
+  body.classList.add("is-ready");
 })();

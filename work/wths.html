@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Student Council and the Class of 2027 site — Kaliph Howard</title>
   <meta name="description" content="Student representation, senior-year events, and a website built for my classmates.">
-  <meta name="theme-color" content="#f5f7fc">
+  <meta name="theme-color" content="#d9d3c8">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Student Council and the Class of 2027 site — Kaliph Howard">
   <meta property="og:description" content="Student representation, senior-year events, and a website built for my classmates.">
@@ -14,42 +14,106 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/site.css">
   <script>document.documentElement.classList.replace('no-js','js')</script>
   <script src="../js/site.js" defer></script>
-</head>
-<body data-page="work">
+</head><body data-page="work">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
 
+  <!-- Shared header: identical on every page except aria-current -->
   <header class="site-head">
-    <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">kh.</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
-    <nav class="glass nav" aria-label="Primary">
+    <a class="brand" href="../index.html" aria-label="Kaliph Howard, home"><span class="brand__mark" aria-hidden="true">kh</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
+    <nav class="nav" aria-label="Primary">
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../work.html" aria-current="page"><span class="nav__pill" aria-hidden="true"></span>Work</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../index.html"><span data-text="Home">Home</span></a></li>
+        <li><a href="../work.html" aria-current="page"><span data-text="Work">Work</span></a></li>
+        <li><a href="../about.html"><span data-text="About">About</span></a></li>
+        <li><a href="../contact.html"><span data-text="Contact">Contact</span></a></li>
       </ul>
     </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu <b aria-hidden="true"></b></button>
   </header>
-
-  <main id="main" class="page case"><header class="case__head">
-    <p class="eyebrow eyebrow--accent"><a href="../work.html">Work</a> / Student Council & Class of 2027</p>
-    <h1 class="display">Two ways I contribute at school.</h1><p class="lede">As Student Council President at Warren Township High School, I plan events, lead event committees, and help staff when needed. Separately, I built and maintain wths2027.com for the Class of 2027.</p></header>
-    <dl class="case__meta"><div><dt>Student Council</dt><dd>President · Events, committees, and staff support</dd></div><div><dt>For</dt><dd>Warren Township High School · Class of 2027</dd></div><div><dt>Website tools</dt><dd>Next.js, TypeScript, SQLite</dd></div><div><dt>Visit</dt><dd><a href="https://wths2027.com" rel="noopener">wths2027.com</a></dd></div></dl><div class="case__body"><section aria-labelledby="council-role"><h2 id="council-role">Student Council President</h2><div><p class="section-intro">My council work has three main parts.</p><dl class="detail-list"><div><dt>Event planning</dt><dd>I help plan school events.</dd></div><div><dt>Committee leadership</dt><dd>I lead committees for different events, including the royalty and social media committees.</dd></div><div><dt>Staff support</dt><dd>I help staff when they need support.</dd></div></dl></div></section><section aria-labelledby="s0"><h2 id="s0">A separate website project</h2><div class="prose"><p>Senior year comes with events, deadlines, photos, and questions. I wanted a place where classmates could find that information without needing to ask someone each time. I built and maintain the class website as a separate project from my Student Council responsibilities.</p></div></section><section aria-labelledby="s1"><h2 id="s1">Building the class site</h2><div class="prose"><p>I designed and built the class site. Its pages cover events and RSVPs, announcements, deadlines, a photo gallery, senior spotlights, and an opt-in directory.</p><p>I also built an admin dashboard so authorized contributors can update content. Forms let classmates submit material without needing to work on the code.</p></div></section><section aria-labelledby="website-preview"><h2 id="website-preview">The class website</h2><figure class="case__hero"><a class="artifact-link" data-lightbox href="../assets/work/wths-home.jpg" aria-label="Enlarge project screenshot"><img src="../assets/work/wths-home.jpg" alt="The WTHS Class of 2027 website with graduation countdown and links to class information." width="1440" height="900"><span class="artifact-zoom" aria-hidden="true">View larger ↗</span></a><figcaption>Class of 2027 website · September 2026</figcaption></figure></section><section aria-labelledby="s2"><h2 id="s2">The class Instagram</h2><div class="prose"><p>I also manage the class Instagram, where the insights snapshot I shared on September 2, 2026 showed 72,835 views. That is a platform count, not a count of individual students. The website’s separate analytics snapshot appears below.</p></div></section><section aria-labelledby="screens"><h2 id="screens">From the project</h2><div class="shots"><figure><a class="artifact-link" data-lightbox href="../assets/work/wths-events.jpg" aria-label="Enlarge project screenshot"><img src="../assets/work/wths-events.jpg" alt="Events, with category filters and a calendar view." loading="lazy"><span class="artifact-zoom" aria-hidden="true">View larger ↗</span></a><figcaption>Events, with category filters and a calendar view.</figcaption></figure><figure><a class="artifact-link" data-lightbox href="../assets/work/wths-announcements.jpg" aria-label="Enlarge project screenshot"><img src="../assets/work/wths-announcements.jpg" alt="Class announcements and pinned posts." loading="lazy"><span class="artifact-zoom" aria-hidden="true">View larger ↗</span></a><figcaption>Class announcements and pinned posts.</figcaption></figure><figure><a class="artifact-link" data-lightbox href="../assets/work/wths-mobile.jpg" aria-label="Enlarge project screenshot"><img src="../assets/work/wths-mobile.jpg" alt="The class website on a phone." loading="lazy"><span class="artifact-zoom" aria-hidden="true">View larger ↗</span></a><figcaption>The class website on a phone.</figcaption></figure></div></section><section aria-labelledby="walkthrough"><h2 id="walkthrough">Inside the website</h2><dl class="detail-list"><div><dt>Find what’s happening</dt><dd>Event pages combine dates, locations, RSVPs, and calendar links. Announcements give the class a place to find updates alongside its upcoming events.</dd></div><div><dt>Contribute to the class</dt><dd>Photo submissions, announcement requests, and spotlight nominations give classmates ways to take part. These go through moderation before publication.</dd></div><div><dt>Keep information current</dt><dd>The admin dashboard lets authorized contributors manage events, announcements, the gallery, resources, and other class information without editing the code.</dd></div><div><dt>Be clear about uncertainty</dt><dd>The site supports source and confirmation labels for event information. Dates that have not been confirmed can remain unset instead of looking official.</dd></div></dl></section><section aria-labelledby="photo-workflow"><h2 id="photo-workflow">From submission to gallery</h2><div><p class="section-intro">Photo sharing is one example of how the public site and editing tools work together.</p><ol class="workflow" aria-label="Photo submission workflow"><li><span>01</span><strong>Submit</strong><p>A classmate uploads a photo, adds a caption and photographer credit, and confirms permission to share it.</p></li><li><span>02</span><strong>Review</strong><p>The submission appears in the admin gallery queue, where an authorized contributor can approve or reject it.</p></li><li><span>03</span><strong>Publish</strong><p>Approved submissions appear in the public gallery, where visitors can browse and enlarge photos.</p></li></ol><p class="evidence-note">This describes the website’s existing workflow. It is separate from my Student Council duties.</p></div></section><section aria-labelledby="numbers"><h2 id="numbers">A snapshot of use</h2><div><div class="metric-pair"><div><strong>1,101</strong><span>Website visits</span></div><div><strong>1,860</strong><span>Page views</span></div></div><p class="evidence-note">From the website analytics snapshot I shared on September 2, 2026. Visits and page views are different measures; neither is a count of unique classmates.</p></div></section><section aria-labelledby="decisions"><h2 id="decisions">The decisions behind it</h2><div class="prose"><p>The project brings together a public experience and an editing experience. Classmates need to find information quickly; contributors need a manageable way to keep it up to date. The dashboard, moderation tools, and public pages are different parts of that same problem.</p><p>Keeping the site useful and current is an ongoing responsibility throughout senior year. I’m interested in continuing this kind of work in college: looking at what a student group needs, then building something practical around it.</p></div></section></div>
-    <nav class="case__nav" aria-label="More work"><a class="glass cta" href="nibsu.html">Next: National Independent Black Student Union <span aria-hidden="true">↗</span></a><a class="glass cta" href="../work.html">All work <span aria-hidden="true">↗</span></a></nav></main><dialog class="artifact-dialog" aria-labelledby="artifact-dialog-title"><div class="artifact-dialog__head"><h2 id="artifact-dialog-title">Project screenshot</h2><form method="dialog"><button class="cta" type="submit">Close <span aria-hidden="true">×</span></button></form></div><figure><img data-artifact-image alt=""><figcaption data-artifact-caption></figcaption></figure></dialog>
-
-  <footer class="site-foot">
-    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
+  <div class="menu" id="menu">
     <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../work.html">Work</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../index.html"><small>01</small>Home</a></li>
+      <li><a href="../work.html"><small>02</small>Work</a></li>
+      <li><a href="../about.html"><small>03</small>About</a></li>
+      <li><a href="../contact.html"><small>04</small>Contact</a></li>
     </ul>
-    <span>© <span data-year>2026</span> Kaliph Howard</span>
+    <div class="menu__foot"><span>adventacious@gmail.com</span><span>Chicago, Illinois · Class of 2027</span></div>
+  </div>
+
+  <main id="main" class="page">
+    <div class="wrap">
+      <header class="case__hero">
+        <p class="crumb" data-reveal="fade"><a href="../work.html">Work</a><span aria-hidden="true">/</span><span>Student Council &amp; Class of 2027</span></p>
+        <h1 class="display case__title" data-split>Two ways I contribute at school.</h1>
+        <p class="lede" data-reveal style="--i:2">As Student Council President at Warren Township High School, I plan events, lead event committees, and help staff when needed. Separately, I built and maintain wths2027.com for the Class of 2027.</p>
+      </header>
+      <dl class="meta" data-stagger><div><dt>Student Council</dt><dd>President · Events, committees, and staff support</dd></div><div><dt>Since</dt><dd>August 2026</dd></div><div><dt>For</dt><dd>Warren Township High School · Class of 2027</dd></div><div><dt>Website tools</dt><dd>Next.js, TypeScript, SQLite</dd></div><div><dt>Visit</dt><dd><a href="https://wths2027.com" rel="noopener">wths2027.com</a></dd></div></dl>
+      <div class="cover" data-reveal>
+        <figure><a class="zoom-link cover__frame" data-lightbox href="../assets/work/wths-home.jpg" aria-label="Enlarge screenshot: Class of 2027 website · September 2026"><img src="../assets/work/wths-home.jpg" alt="The WTHS Class of 2027 website with graduation countdown and links to class information." width="1440" height="900"><span class="zoom-tag" aria-hidden="true">View larger ↗</span></a><figcaption>Class of 2027 website · September 2026</figcaption></figure>
+      </div>
+      <div class="case__body">
+      <section class="block" aria-labelledby="b01">
+        <h2 class="block__title" id="b01" data-n="01" data-reveal>Student Council President</h2>
+        <div class="block__content" data-reveal style="--i:1"><p class="intro">My council work has three main parts.</p><dl class="detail"><div><dt>Event planning</dt><dd>I help plan school events.</dd></div><div><dt>Committee leadership</dt><dd>I lead committees for different events, including the royalty and social media committees.</dd></div><div><dt>Staff support</dt><dd>I help staff when they need support.</dd></div></dl></div>
+      </section>
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b02">
+        <h2 class="block__title" id="b02" data-n="02" data-reveal>A separate website project</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>Senior year comes with events, deadlines, photos, and questions. I wanted a place where classmates could find that information without needing to ask someone each time. I built and maintain the class website as a separate project from my Student Council responsibilities.</p></div></div>
+      </section>
+      <section class="block block--half" aria-labelledby="b03">
+        <h2 class="block__title" id="b03" data-n="03" data-reveal>Building the class site</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>I designed and built the class site. Its pages cover events and RSVPs, announcements, deadlines, a photo gallery, senior spotlights, and an opt-in directory.</p><p>I also built an admin dashboard so authorized contributors can update content. Forms let classmates submit material without needing to work on the code.</p></div></div>
+      </section>
+      <section class="block block--half" aria-labelledby="b04">
+        <h2 class="block__title" id="b04" data-n="04" data-reveal>The class Instagram</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>I also manage the class Instagram, where the insights snapshot I shared on September 2, 2026 showed 72,835 views. That is a platform count, not a count of individual students. The website’s separate analytics snapshot appears below.</p></div></div>
+      </section>
+      </div>
+      <section class="block" aria-labelledby="b05">
+        <h2 class="block__title" id="b05" data-n="05" data-reveal>From the project</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="shots"><figure><a class="zoom-link" data-lightbox href="../assets/work/wths-events.jpg" aria-label="Enlarge screenshot: Events, with category filters and a calendar view."><img src="../assets/work/wths-events.jpg" alt="Events, with category filters and a calendar view." loading="lazy"><span class="zoom-tag" aria-hidden="true">View larger ↗</span></a><figcaption>Events, with category filters and a calendar view.</figcaption></figure><figure><a class="zoom-link" data-lightbox href="../assets/work/wths-announcements.jpg" aria-label="Enlarge screenshot: Class announcements and pinned posts."><img src="../assets/work/wths-announcements.jpg" alt="Class announcements and pinned posts." loading="lazy"><span class="zoom-tag" aria-hidden="true">View larger ↗</span></a><figcaption>Class announcements and pinned posts.</figcaption></figure><figure><a class="zoom-link" data-lightbox href="../assets/work/wths-mobile.jpg" aria-label="Enlarge screenshot: The class website on a phone."><img src="../assets/work/wths-mobile.jpg" alt="The class website on a phone." loading="lazy"><span class="zoom-tag" aria-hidden="true">View larger ↗</span></a><figcaption>The class website on a phone.</figcaption></figure></div></div>
+      </section>
+      <section class="block" aria-labelledby="b06">
+        <h2 class="block__title" id="b06" data-n="06" data-reveal>Inside the website</h2>
+        <div class="block__content" data-reveal style="--i:1"><dl class="detail"><div><dt>Find what’s happening</dt><dd>Event pages combine dates, locations, RSVPs, and calendar links. Announcements give the class a place to find updates alongside its upcoming events.</dd></div><div><dt>Contribute to the class</dt><dd>Photo submissions, announcement requests, and spotlight nominations give classmates ways to take part. These go through moderation before publication.</dd></div><div><dt>Keep information current</dt><dd>The admin dashboard lets authorized contributors manage events, announcements, the gallery, resources, and other class information without editing the code.</dd></div><div><dt>Be clear about uncertainty</dt><dd>The site supports source and confirmation labels for event information. Dates that have not been confirmed can remain unset instead of looking official.</dd></div></dl></div>
+      </section>
+      <section class="block" aria-labelledby="b07">
+        <h2 class="block__title" id="b07" data-n="07" data-reveal>From submission to gallery</h2>
+        <div class="block__content" data-reveal style="--i:1"><p class="intro">Photo sharing is one example of how the public site and editing tools work together.</p><ol class="steps" aria-label="Photo submission workflow"><li><span>01</span><strong>Submit</strong><p>A classmate uploads a photo, adds a caption and photographer credit, and confirms permission to share it.</p></li><li><span>02</span><strong>Review</strong><p>The submission appears in the admin gallery queue, where an authorized contributor can approve or reject it.</p></li><li><span>03</span><strong>Publish</strong><p>Approved submissions appear in the public gallery, where visitors can browse and enlarge photos.</p></li></ol><p class="note">This describes the website’s existing workflow. It is separate from my Student Council duties.</p></div>
+      </section>
+      <section class="block" aria-labelledby="b08">
+        <h2 class="block__title" id="b08" data-n="08" data-reveal>A snapshot of use</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="metrics"><div><strong data-count="1101">1,101</strong><span>Website visits</span></div><div><strong data-count="1860">1,860</strong><span>Page views</span></div></div><p class="note">From the website analytics snapshot I shared on September 2, 2026. Visits and page views are different measures; neither is a count of unique classmates.</p></div>
+      </section>
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b09">
+        <h2 class="block__title" id="b09" data-n="09" data-reveal>The decisions behind it</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>The project brings together a public experience and an editing experience. Classmates need to find information quickly; contributors need a manageable way to keep it up to date. The dashboard, moderation tools, and public pages are different parts of that same problem.</p><p>Keeping the site useful and current is an ongoing responsibility throughout senior year. I’m interested in continuing this kind of work in college: looking at what a student group needs, then building something practical around it.</p></div></div>
+      </section>
+      </div>
+      </div>
+      <nav class="next" aria-label="Next project"><a href="./nibsu.html"><span><small>Next project</small><strong>National Independent Black Student Union</strong></span><b aria-hidden="true">↗</b></a></nav>
+    </div>
+  </main>
+
+  <footer class="site-foot dark">
+
+    <div class="wrap site-foot__bar">
+      <span>Kaliph Howard · Chicago, Illinois · Class of 2027</span>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="https://github.com/adventau/colleges" rel="noopener">Source</a></li>
+      </ul>
+      <span>© <span data-year>2026</span> Kaliph Howard</span>
+    </div>
   </footer>
 </body>
 </html>

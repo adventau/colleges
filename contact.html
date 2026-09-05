@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Contact — Kaliph Howard</title>
   <meta name="description" content="How to reach Kaliph Howard.">
-  <meta name="theme-color" content="#f5f7fc">
+  <meta name="theme-color" content="#d9d3c8">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact — Kaliph Howard">
   <meta property="og:description" content="How to reach Kaliph Howard.">
@@ -14,43 +14,46 @@
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/site.css">
   <script>document.documentElement.classList.replace('no-js','js')</script>
   <script src="./js/site.js" defer></script>
-</head>
-<body data-page="contact">
+</head><body data-page="contact">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
 
+  <!-- Shared header: identical on every page except aria-current -->
   <header class="site-head">
-    <a class="brand" href="./index.html"><span class="brand__mark" aria-hidden="true">kh.</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
-    <nav class="glass nav" aria-label="Primary">
+    <a class="brand" href="./index.html" aria-label="Kaliph Howard, home"><span class="brand__mark" aria-hidden="true">kh</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
+    <nav class="nav" aria-label="Primary">
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./work.html">Work</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html" aria-current="page"><span class="nav__pill" aria-hidden="true"></span>Contact</a></li>
+        <li><a href="./index.html"><span data-text="Home">Home</span></a></li>
+        <li><a href="./work.html"><span data-text="Work">Work</span></a></li>
+        <li><a href="./about.html"><span data-text="About">About</span></a></li>
+        <li><a href="./contact.html" aria-current="page"><span data-text="Contact">Contact</span></a></li>
       </ul>
     </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu <b aria-hidden="true"></b></button>
   </header>
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="./index.html"><small>01</small>Home</a></li>
+      <li><a href="./work.html"><small>02</small>Work</a></li>
+      <li><a href="./about.html"><small>03</small>About</a></li>
+      <li><a href="./contact.html"><small>04</small>Contact</a></li>
+    </ul>
+    <div class="menu__foot"><span>adventacious@gmail.com</span><span>Chicago, Illinois · Class of 2027</span></div>
+  </div>
 
   <main id="main" class="page">
-    <div class="contact">
-      <div class="contact__main">
-        <p class="eyebrow eyebrow--accent enter" style="--i:0">Contact</p>
-        <h1 class="display enter" style="--i:1;font-size:clamp(2.6rem,2rem + 4vw,5.4rem)">Get in touch.</h1>
-        <p class="lede enter" style="--i:2">Thanks for taking the time to get to know me. If something here made you curious, I’d love to hear from you.</p>
-        <p class="enter" style="--i:3">
-          <a class="glass contact__email" href="mailto:adventacious@gmail.com">
-            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4.5A1.5 1.5 0 0 1 3.5 3h9A1.5 1.5 0 0 1 14 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5v-7Zm1.7.5L8 8.4 12.3 5H3.7Z" fill="currentColor"/></svg>
-            adventacious@gmail.com
-          </a>
-        </p>
-        <p class="contact__note">I’d be happy to talk about my role in a project, share more about my interests, or answer a question about this portfolio.</p>
+    <div class="wrap contact">
+      <div>
+        <p class="eyebrow" data-reveal="fade">Contact</p>
+        <h1 class="display h1" data-split style="margin-top:1rem">Get in touch.</h1>
+        <p class="lede" data-reveal style="--i:2;margin-top:1.4rem">Thanks for taking the time to get to know me. If something here made you curious, I’d love to hear from you.</p>
+        <p data-reveal style="--i:3;margin-top:2.5rem"><a class="email" href="mailto:adventacious@gmail.com">adventacious@gmail.com</a><br><button class="copy-btn" type="button" data-copy="adventacious@gmail.com">Copy address</button></p>
+        <p data-reveal style="--i:4;margin-top:1.8rem;color:var(--fg-dim);max-width:34em">I’d be happy to talk about my role in a project, share more about my interests, or answer a question about this portfolio.</p>
       </div>
-
-      <dl class="contact__list enter" style="--i:3">
+      <dl class="contact-list" data-stagger>
         <div><dt>Based in</dt><dd>Chicago, Illinois</dd></div>
         <div><dt>School</dt><dd>Warren Township High School, Class of 2027</dd></div>
         <div><dt>Good for</dt><dd>Questions from admissions readers, conversations about the projects, and anyone who wants to work on something together.</dd></div>
@@ -61,14 +64,19 @@
     </div>
   </main>
 
-  <footer class="site-foot">
-    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
-    <ul>
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./work.html">Work</a></li>
-      <li><a href="./about.html">About</a></li>
-    </ul>
-    <span>© <span data-year>2026</span> Kaliph Howard</span>
+  <footer class="site-foot dark">
+
+    <div class="wrap site-foot__bar">
+      <span>Kaliph Howard · Chicago, Illinois · Class of 2027</span>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./work.html">Work</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="https://github.com/adventau/colleges" rel="noopener">Source</a></li>
+      </ul>
+      <span>© <span data-year>2026</span> Kaliph Howard</span>
+    </div>
   </footer>
 </body>
 </html>

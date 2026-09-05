@@ -6,7 +6,9 @@
   "description": "Kaliph Howard's college-admissions portfolio. Static HTML, CSS and JavaScript with no build step.",
   "scripts": {
     "dev": "node scripts/dev-server.mjs",
-    "check": "node --check js/site.js && node --check scripts/dev-server.mjs && node --check scripts/build-colleges.mjs",
-    "colleges": "node scripts/build-colleges.mjs"
+    "check": "node --check js/site.js && node --check scripts/dev-server.mjs && node --check scripts/build-pages.mjs && node --check scripts/build-colleges.mjs",
+    "pages": "node scripts/build-pages.mjs && node scripts/build-colleges.mjs",
+    "colleges": "node scripts/build-colleges.mjs",
+    "og": "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --hide-scrollbars --window-size=1200,630 --virtual-time-budget=8000 --screenshot=assets/og.png scripts/og-template.html"
   }
 }

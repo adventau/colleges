@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" class="no-js" data-facet="technology">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hearth — Kaliph Howard</title>
+  <meta name="description" content="A private app combining messaging, files, notes, and an iOS experience.">
+  <meta name="theme-color" content="#d9d3c8">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Hearth — Kaliph Howard">
+  <meta property="og:description" content="A private app combining messaging, files, notes, and an iOS experience.">
+  <meta property="og:image" content="../assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/site.css">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
+  <script src="../js/site.js" defer></script>
+</head><body data-page="work">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Shared header: identical on every page except aria-current -->
+  <header class="site-head">
+    <a class="brand" href="../index.html" aria-label="Kaliph Howard, home"><span class="brand__mark" aria-hidden="true">kh</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html"><span data-text="Home">Home</span></a></li>
+        <li><a href="../work.html" aria-current="page"><span data-text="Work">Work</span></a></li>
+        <li><a href="../about.html"><span data-text="About">About</span></a></li>
+        <li><a href="../contact.html"><span data-text="Contact">Contact</span></a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu <b aria-hidden="true"></b></button>
+  </header>
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="../index.html"><small>01</small>Home</a></li>
+      <li><a href="../work.html"><small>02</small>Work</a></li>
+      <li><a href="../about.html"><small>03</small>About</a></li>
+      <li><a href="../contact.html"><small>04</small>Contact</a></li>
+    </ul>
+    <div class="menu__foot"><span>adventacious@gmail.com</span><span>Chicago, Illinois · Class of 2027</span></div>
+  </div>
+
+  <main id="main" class="page">
+    <div class="wrap">
+      <header class="case__hero">
+        <p class="crumb" data-reveal="fade"><a href="../work.html">Work</a><span aria-hidden="true">/</span><span>Hearth</span></p>
+        <h1 class="display case__title" data-split>A personal idea, turned into an app.</h1>
+        <p class="lede" data-reveal style="--i:2">Hearth is a private web app for messaging, files, notes, and personal tools, made for a small circle of people. I work on its design and development, including an iOS wrapper for using it on a phone.</p>
+      </header>
+      <dl class="meta" data-stagger><div><dt>Role</dt><dd>App design and development</dd></div><div><dt>Since</dt><dd>Early 2026</dd></div><div><dt>Areas</dt><dd>Technology · Design</dd></div><div><dt>Tools</dt><dd>Node.js, Socket.IO, PostgreSQL, Capacitor</dd></div><div><dt>Access</dt><dd>Private app · working name Royal Vault</dd></div></dl>
+      <div class="cover" data-reveal>
+        <figure><a class="zoom-link cover__frame" data-lightbox href="../assets/work/royal-vault-login.jpg" aria-label="Enlarge screenshot: Hearth · Sign-in screen, built under the working name Royal Vault"><img src="../assets/work/royal-vault-login.jpg" alt="The Hearth sign-in screen, showing its working name, Royal Vault." width="1440" height="900"><span class="zoom-tag" aria-hidden="true">View larger ↗</span></a><figcaption>Hearth · Sign-in screen, built under the working name Royal Vault</figcaption></figure>
+      </div>
+      <div class="case__body">
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b01">
+        <h2 class="block__title" id="b01" data-n="01" data-reveal>What it does</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>The app brings messaging, files, and notes into one place. It is a personal project with a small intended audience, which lets me work closely with the details of how it feels to use.</p></div></div>
+      </section>
+      <section class="block block--half" aria-labelledby="b02">
+        <h2 class="block__title" id="b02" data-n="02" data-reveal>What I work on</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>My work includes the web interface, the server, real-time messaging, and media handling. The iOS wrapper connects the web app to a phone experience.</p><p>This gives me a project that crosses several parts of development. A feature needs an interface, a way to handle its data, and a way to fit into the rest of the app.</p></div></div>
+      </section>
+      </div>
+      <section class="block" aria-labelledby="b03">
+        <h2 class="block__title" id="b03" data-n="03" data-reveal>What happens when a message is sent</h2>
+        <div class="block__content" data-reveal style="--i:1"><p class="intro">A chat message connects several parts of the app: the screen someone uses, the stored conversation, and the live updates other connected clients receive.</p><ol class="steps" aria-label="Message workflow"><li><span>01</span><strong>Compose</strong><p>The sender writes a message and can include attachments or reply to an earlier message.</p></li><li><span>02</span><strong>Save</strong><p>The server records the message, its sender, timestamp, attachments, and any reply relationship.</p></li><li><span>03</span><strong>Deliver</strong><p>A Socket.IO event sends the new message to connected clients so the conversation can update live.</p></li></ol><p class="note">A simplified explanation of the implemented message flow; no private conversation content is shown.</p></div>
+      </section>
+      <div class="blocks-2">
+      <section class="block block--half" aria-labelledby="b04">
+        <h2 class="block__title" id="b04" data-n="04" data-reveal>The details behind voice messages</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>A voice recording has to do more than upload successfully: it needs to play in the receiving interface. The server includes a conversion step that turns uploaded recordings into M4A/AAC audio, a format intended for playback across the app’s web and phone interfaces.</p><p>If the conversion tool is unavailable or conversion fails, the upload handler falls back to the original file. This is an example of the media-processing work behind a simple-looking chat feature.</p></div></div>
+      </section>
+      <section class="block block--half" aria-labelledby="b05">
+        <h2 class="block__title" id="b05" data-n="05" data-reveal>Connecting web and phone</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>The iOS project uses Capacitor to load the hosted web application inside a native shell. The web interface stays shared, while the native layer adds a device-authentication gate and a cover when the app goes into the background.</p><p>This wrapper depends on the hosted app and a network connection. It is a way to bring the web project onto a phone, with additional work around how the app opens and returns from the background.</p></div></div>
+      </section>
+      <section class="block block--half" aria-labelledby="b06">
+        <h2 class="block__title" id="b06" data-n="06" data-reveal>The product question</h2>
+        <div class="block__content" data-reveal style="--i:1"><div class="prose"><p>A project with several features can easily feel like several separate tools. I’m interested in how the interface can make those pieces feel connected while keeping common actions easy to find.</p><p>I’m interested in how an app becomes something people want to return to: small interactions, readable layouts, and an experience that carries over from a computer to a phone. This project lets me keep exploring those decisions alongside the server-side work.</p></div></div>
+      </section>
+      </div>
+      </div>
+      <nav class="next" aria-label="Next project"><a href="./wths.html"><span><small>Next project</small><strong>Student Council &amp; Class of 2027</strong></span><b aria-hidden="true">↗</b></a></nav>
+    </div>
+  </main>
+
+  <footer class="site-foot dark">
+
+    <div class="wrap site-foot__bar">
+      <span>Kaliph Howard · Chicago, Illinois · Class of 2027</span>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="https://github.com/adventau/colleges" rel="noopener">Source</a></li>
+      </ul>
+      <span>© <span data-year>2026</span> Kaliph Howard</span>
+    </div>
+  </footer>
+</body>
+</html>

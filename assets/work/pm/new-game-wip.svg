@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b1f4a"/>
+      <stop offset="55%" stop-color="#1b1230"/>
+      <stop offset="100%" stop-color="#0a0613"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.3" cy="0.25" r="0.75">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 H0 V40" fill="none" stroke="#c084fc" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#c084fc" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+
+  <!-- Drafting guides / composition frame -->
+  <g stroke="#e9d5ff" stroke-opacity="0.22" stroke-width="1" fill="none" stroke-dasharray="4 6">
+    <rect x="60" y="60" width="680" height="380" rx="14"/>
+    <line x1="60" y1="250" x2="740" y2="250"/>
+    <line x1="400" y1="60" x2="400" y2="440"/>
+  </g>
+
+  <!-- Wireframe blocks (abstract game-world placeholders) -->
+  <g fill="none" stroke="#e9d5ff" stroke-opacity="0.35" stroke-width="1.4">
+    <polygon points="140,330 240,280 340,330 240,380"/>
+    <polygon points="240,280 340,330 340,240 240,190"/>
+    <polygon points="140,330 240,380 240,470 140,420"/>
+
+    <polygon points="470,290 560,250 650,290 560,330" stroke-opacity="0.28"/>
+    <polygon points="560,250 650,290 650,210 560,170" stroke-opacity="0.28"/>
+  </g>
+
+  <g fill="url(#dots)" opacity="0.7">
+    <rect x="480" y="350" width="200" height="60" rx="6"/>
+  </g>
+
+  <!-- Status label -->
+  <g>
+    <rect x="60" y="60" width="148" height="28" rx="14" fill="#c084fc" fill-opacity="0.12" stroke="#c084fc" stroke-opacity="0.5" stroke-width="1"/>
+    <circle cx="78" cy="74" r="4" fill="#c084fc">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="92" y="78" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" letter-spacing="2.5" fill="#f5e6ff" style="text-transform:uppercase; font-weight:500;">In development</text>
+  </g>
+
+  <!-- Heading -->
+  <g font-family="'Iowan Old Style', Georgia, serif" fill="#f5e6ff">
+    <text x="60" y="170" font-size="64" font-weight="500" letter-spacing="-0.02em">Next title.</text>
+    <text x="60" y="210" font-size="18" fill-opacity="0.7" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="400">High-grossing genre · $20K allocated · Apr 2026</text>
+  </g>
+
+  <!-- Sparkline suggesting momentum -->
+  <polyline points="420,420 470,400 510,410 550,375 600,385 640,345 680,358 720,310"
+            fill="none" stroke="#e9d5ff" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="720" cy="310" r="4" fill="#e9d5ff"/>
+</svg>

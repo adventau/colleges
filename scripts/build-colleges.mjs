@@ -33,7 +33,7 @@ for (const c of colleges) {
   let html = template;
 
   // Paths: the page lives two folders deep.
-  html = html.replace(/(href|src)="\.\//g, '$1="../../');
+  html = html.replace(/(href|src|content)="\.\//g, '$1="../../');
 
   // Identity: which school, which facet to open on, keep it out of search engines.
   html = html.replace('<html lang="en" class="no-js" data-facet="leadership">', `<html lang="en" class="no-js" data-facet="${c.facet}" data-for="${c.slug}">`);
@@ -48,12 +48,14 @@ for (const c of colleges) {
     html = html.replace(new RegExp(`(<div class="facet-panel" role="tabpanel" id="panel-${f}" aria-labelledby="tab-${f}")( hidden)?>`), `$1${on ? "" : " hidden"}>`);
   }
 
-  // A small invitation belongs near the name; the complete letter follows the introduction.
+  // A small invitation belongs near the name; the complete letter follows the facets.
   const style = ` style="--school:${c.color || '#004684'};--school-2:${c.color2 || '#f3b800'}"`;
-  const invitation = `<a class="college-invitation" href="#college-letter">A personal note for ${esc(c.short || c.name)} <span aria-hidden="true">↘</span></a>`;
-  const paragraphs = c.note.split(/\n\s*\n/).map((p) => `<p>${esc(p)}</p>`).join("\n");
+  const short = esc(c.short || c.name);
+  const invitation = `<a class="college-invitation" href="#college-letter">A note for ${short} <span aria-hidden="true">↘</span></a>`;
+  const paragraphs = c.note.split(/\n\s*\n/).map((p) => `<p>${esc(p)}</p>`).join("\n        ");
   const note = `
-    <section class="college-letter" id="college-letter" aria-labelledby="college-letter-title"${style}>
+  <section class="college-letter section wrap" id="college-letter" aria-labelledby="college-letter-title"${style}>
+    <div class="college-letter__inner" data-reveal>
       <aside class="college-letter__aside">
         <p class="eyebrow">The next chapter</p>
         <h2 id="college-letter-title">${esc(c.name)}</h2>
@@ -69,7 +71,8 @@ for (const c of colleges) {
           <a href="../../work/avnt.html">My interest in entrepreneurship ↗</a>
         </nav>
       </div>
-    </section>`;
+    </div>
+  </section>`;
   if (!html.includes('<!-- COLLEGE_INVITATION -->') || !html.includes('<!-- COLLEGE_LETTER -->')) throw new Error('College insertion points are missing');
   html = html.replace('<!-- COLLEGE_INVITATION -->', invitation).replace('<!-- COLLEGE_LETTER -->', note);
 

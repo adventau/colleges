@@ -4,39 +4,68 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Not found — Kaliph Howard</title>
+  <meta name="description" content="That page isn’t available.">
+  <meta name="theme-color" content="#d9d3c8">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#f5f7fc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Not found — Kaliph Howard">
+  <meta property="og:description" content="That page isn’t available.">
+  <meta property="og:image" content="/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/site.css">
   <script>document.documentElement.classList.replace('no-js','js')</script>
   <script src="/js/site.js" defer></script>
-</head>
-<body data-page="404">
+</head><body data-page="404">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="scene" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <!-- Shared header: identical on every page except aria-current -->
   <header class="site-head">
-    <a class="brand" href="/index.html"><span class="brand__mark" aria-hidden="true">kh.</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
-    <nav class="glass nav" aria-label="Primary">
+    <a class="brand" href="/index.html" aria-label="Kaliph Howard, home"><span class="brand__mark" aria-hidden="true">kh</span><span>Kaliph Howard<small>Chicago · Class of 2027</small></span></a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="/index.html"><span data-text="Home">Home</span></a></li>
+        <li><a href="/work.html"><span data-text="Work">Work</span></a></li>
+        <li><a href="/about.html"><span data-text="About">About</span></a></li>
+        <li><a href="/contact.html"><span data-text="Contact">Contact</span></a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu <b aria-hidden="true"></b></button>
+  </header>
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="/index.html"><small>01</small>Home</a></li>
+      <li><a href="/work.html"><small>02</small>Work</a></li>
+      <li><a href="/about.html"><small>03</small>About</a></li>
+      <li><a href="/contact.html"><small>04</small>Contact</a></li>
+    </ul>
+    <div class="menu__foot"><span>adventacious@gmail.com</span><span>Chicago, Illinois · Class of 2027</span></div>
+  </div>
+
+  <main id="main" class="page notfound wrap">
+    <p class="eyebrow" data-reveal="fade">Nothing here</p>
+    <p class="code" aria-hidden="true">404</p>
+    <h1 class="display h2" data-split>That page isn’t available.</h1>
+    <p class="lede" data-reveal style="--i:2">You can return home or explore my work instead.</p>
+    <div class="site-foot__row" data-reveal style="--i:3"><a class="btn" href="/index.html">Home <i>→</i></a><a class="btn btn--ghost" href="/work.html">Work <i>→</i></a></div>
+  </main>
+
+  <footer class="site-foot dark">
+
+    <div class="wrap site-foot__bar">
+      <span>Kaliph Howard · Chicago, Illinois · Class of 2027</span>
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/work.html">Work</a></li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html">Contact</a></li>
+        <li><a href="https://github.com/adventau/colleges" rel="noopener">Source</a></li>
       </ul>
-    </nav>
-  </header>
-  <main id="main" class="page notfound">
-    <p class="eyebrow eyebrow--accent enter" style="--i:0">404</p>
-    <h1 class="display enter" style="--i:1">Nothing here.</h1>
-    <p class="lede enter" style="--i:2">That page isn’t available. You can return home or explore my work below.</p>
-    <p class="enter" style="--i:3;display:flex;gap:.75rem;flex-wrap:wrap"><a class="glass cta" href="/index.html">Home <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a class="glass cta" href="/work.html">Work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-  </main>
-  <footer class="site-foot">
-    <div><strong>Kaliph Howard</strong><br>Chicago, Illinois · Class of 2027</div>
-    <span>© <span data-year>2026</span> Kaliph Howard</span>
+      <span>© <span data-year>2026</span> Kaliph Howard</span>
+    </div>
   </footer>
 </body>
 </html>
